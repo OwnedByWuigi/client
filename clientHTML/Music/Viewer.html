@@ -11,9 +11,9 @@
 	<script language="javascript" src="../Javascript/ServiceList.js"></script>
 	<script language="javascript" src="../Javascript/VKCodes.js"></script>
 	<script language="Javascript" src="../Javascript/Parameters.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 	<script language="Javascript" src="../Javascript/ProgressPanel.js"></script>
-	<script language="javascript" src="msntv:/Javascript/HomeNetworking.js"></script>
+	<script language="javascript" src="/Javascript/HomeNetworking.js"></script>
 	<script language="javascript" src="../Javascript/DMRHome.js"></script>
 	<script language="javascript" src="../Javascript/DMRCommon.js"></script>
 	<script language="javascript" src="../Javascript/DMRNavigate.js"></script>
@@ -30,7 +30,7 @@
 		var Sink = new ActiveXObject("MSNTV.MultipleEventSink");
 		var artURL = parameters.artURL;
 		var maxSavedSelections = 999;
-		var homeURL = "msntv:/Music/MusicHome.html";
+		var homeURL = "/Music/MusicHome.html";
 		var homeMediaType = "music";
 		var itemsText = "songs";
 
@@ -73,7 +73,7 @@
 		{
 			if (CheckSelection("Add to Song List", "song")) {
 				if (AppendToPlaylist(songListUrl)) {
-					PanelManager.AnimationMessageBox("Adding selections...", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 3000);
+					PanelManager.AnimationMessageBox("Adding selections...", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 3000);
 				}
 			}
 		}
@@ -87,11 +87,11 @@
 	</script>
 </head>
 
-<body style="behavior: url(msntv:/HTC/ScrollDelegator.htc);">
+<body style="behavior: url(/HTC/ScrollDelegator.htc);">
 	<table style="height:100%; width:100%;" cellpadding="0" cellspacing="0">
 		<tr>
 			<td style="height:57px;">
-				<msntv:DMRHeading id="Heading" mainTitle="Music" subTitle="" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "msntv:/Settings/WMPVisualization.html" imageURL="msntv:/Music/Images/MusicHeader.jpg" />
+				<msntv:DMRHeading id="Heading" mainTitle="Music" subTitle="" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "/Settings/WMPVisualization.html" imageURL="/Music/Images/MusicHeader.jpg" />
 			</td>
 		<tr>
 			<td>
@@ -131,7 +131,7 @@
 	<table style="position:absolute; bottom:0px; right:0px; width:28%; height:50%;" cellpadding="0" cellspacing="0">
 		<tr>
 			<td style="vertical-align:bottom; padding:9px 0px 8px 11px;">
-				<img id="artImage" style="width:136px; visibility:hidden;" src="msntv:/Images/1x1.gif">
+				<img id="artImage" style="width:136px; visibility:hidden;" src="/Images/1x1.gif">
 			</td>
 		</tr>
 	</table>

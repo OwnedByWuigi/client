@@ -1,13 +1,14 @@
+
 body.stretchyBackground
 {
-	behavior: url(msntv:/htc/StretchyBackground.htc);
+	behavior: url(/htc/StretchyBackground.htc);
 	margin: 0px;
 	border-width: 0px;
 }
 
 body, td
 {
-	font-family: segoe tv;
+	font-family: "Segoe TV";
 	font-size: 18px;
 }
 
@@ -32,7 +33,7 @@ body, td
 
 .inputPwd
 {
-	behavior: url(msntv:/htc/PasswordField.htc);
+	behavior: url(/htc/PasswordField.htc);
 }
 
 .scroller
@@ -83,7 +84,7 @@ ul.links li
 	top:2px;
 	left:-15px;
 	padding-left:13px;
-	background:url(msntv:/Shared/images/BulletCustom.gif) no-repeat;
+	background:url(/Shared/images/BulletCustom.gif) no-repeat;
 	background-position-y:3px;
 }
 ul.links li a

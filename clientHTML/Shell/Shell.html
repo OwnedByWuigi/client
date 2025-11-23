@@ -18,7 +18,7 @@
 		<SCRIPT language="Javascript" src="../Javascript/MSNTVService.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/VKCodes.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/DiplomaSettings.js"></SCRIPT>
-		<SCRIPT language="Javascript" src="msntv:/msntv_progress_loc.js"></SCRIPT>
+		<SCRIPT language="Javascript" src="/msntv_progress_loc.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/ProgressPanel.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/SupportedPrinters.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/Patcher.js"></SCRIPT>
@@ -32,7 +32,7 @@
 		<SCRIPT language="Javascript" src="../Javascript/GuestUser.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/idcrl.js"></SCRIPT>
 		<SCRIPT language="Javascript" src="../Javascript/print.js"></SCRIPT>
-		<SCRIPT language="Javascript" id="ShellResourceFile" src="msntv:/msntv_shell_loc.js"></SCRIPT>
+		<SCRIPT language="Javascript" id="ShellResourceFile" src="/msntv_shell_loc.js"></SCRIPT>
 		<SCRIPT language="Javascript" id="ResourceFile" src=""></SCRIPT>
 
 <SCRIPT language="Javascript">
@@ -106,31 +106,31 @@
 	
 	var statusHeight = STATUS_HEIGHT;
 
-	var statuspanel = new Panel("statusbar", "msntv:/Panels/statusBar.html",
+	var statuspanel = new Panel("statusbar", "/Panels/statusBar.html",
 								APP_PANEL_TYPE, STATIC_PANEL_STYLE, 80,0, false);
 	statuspanel.selectable = false;
 
-	var menupanel = new Panel("menupanel", "msntv:/Panels/Menu.html",
+	var menupanel = new Panel("menupanel", "/Panels/Menu.html",
 								APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
-	var progresspanel = new Panel(PROGRESS_PANEL_NAME, "msntv:/Panels/Progress.html",
+	var progresspanel = new Panel(PROGRESS_PANEL_NAME, "/Panels/Progress.html",
 								  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,75,0,false);
 	var dy = TVShell.DeviceControl.ScreenHeight;
 	progresspanel.step = new Step(0, dy, 0, dy);
 	progresspanel.modal = true;
 	progresspanel.transitionsoundenabled = false;
 
-	var reconnectpanel = new Panel("reconnect", "msntv:/Panels/Reconnect.html",
+	var reconnectpanel = new Panel("reconnect", "/Panels/Reconnect.html",
 								  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,75,0,false);
 	reconnectpanel.modal = true;
 	reconnectpanel.transitionsoundenabled = false;
 
-	var idlewarnpanel = new Panel("idlewarn", "msntv:/Panels/IdleWarningPanel.html",
+	var idlewarnpanel = new Panel("idlewarn", "/Panels/IdleWarningPanel.html",
 									SYSTEM_PANEL_TYPE, POPUP_PANEL_STYLE, 90, 0, false);
 	idlewarnpanel.start = new CenteredRectangle(LARGE_DIALOG_WIDTH,LARGE_DIALOG_HEIGHT);
 	idlewarnpanel.end = new CenteredRectangle(LARGE_DIALOG_WIDTH,LARGE_DIALOG_HEIGHT);
 	idlewarnpanel.modal = true;
 
-	var alertpanel = new Panel("alert", "msntv:/Panels/Alert.html",
+	var alertpanel = new Panel("alert", "/Panels/Alert.html",
 							   ALERT_PANEL_TYPE, SLIDING_PANEL_STYLE,90,0,false);
 	alertpanel.start = new BottomRectangle(56, -56);
 	alertpanel.end = new BottomRectangle(56, 0);
@@ -138,53 +138,53 @@
 	alertpanel.selectable = false;
 	alertpanel.transitionsoundenabled = false;
 
-	var gotopanel = new Panel("gotopanel", "msntv:/Panels/Goto.html",
+	var gotopanel = new Panel("gotopanel", "/Panels/Goto.html",
 							  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 
-	var favoritespanel = new Panel("favoritespanel", "msntv:/Favorites/FavoritesSync.html",
+	var favoritespanel = new Panel("favoritespanel", "/Favorites/FavoritesSync.html",
 							  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 
-	var recentpanel = new Panel("recentpanel", "msntv:/Panels/Recent.html",
+	var recentpanel = new Panel("recentpanel", "/Panels/Recent.html",
 								APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
-	var mediapanel = new Panel("mediapanel", "msntv:/media/media.htm",
+	var mediapanel = new Panel("mediapanel", "/media/media.htm",
 							 APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 	mediapanel.refreshenabled = true;
 
-    var sourcepanel = new Panel("source", "msntv:/Panels/sourcepanel.html",
+    var sourcepanel = new Panel("source", "/Panels/sourcepanel.html",
 								  SYSTEM_PANEL_TYPE, STATIC_PANEL_STYLE,100,0,true);
 	sourcepanel.start = new FullRectangle(0,0,0,0);
 
-    var findpanel = new Panel("find", "msntv:/tvshell/find.htm",
+    var findpanel = new Panel("find", "/tvshell/find.htm",
 								  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,true);
-	impanel = new Panel("impanel", "msntv:/IM/IMPanel.html",
+	impanel = new Panel("impanel", "/IM/IMPanel.html",
 							APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 
-	var autopanel = new Panel("autopanel", "msntv:/Autopanel/autopanel.htm",  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
+	var autopanel = new Panel("autopanel", "/Autopanel/autopanel.htm",  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 
-	var viewdocpanel = new Panel("viewdocpanel", "msntv:/Panels/ViewDocTree.html",
+	var viewdocpanel = new Panel("viewdocpanel", "/Panels/ViewDocTree.html",
 							  SYSTEM_PANEL_TYPE, STATIC_PANEL_STYLE,100,0,true);
 	viewdocpanel.start = new FullRectangle(0,0,0,0);
 
 
-	var printsettingspanel = new Panel("printsettings", "msntv:/Panels/printsettings.html",
+	var printsettingspanel = new Panel("printsettings", "/Panels/printsettings.html",
 							  APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 
-	var servicepanel = new Panel("service", "msntv:/Shell/empty.html",
+	var servicepanel = new Panel("service", "/Shell/empty.html",
 								APP_PANEL_TYPE, STATIC_PANEL_STYLE, 1, 0, false);
 	servicepanel.start = new BottomRectangle(0, 0);
 	servicepanel.selectable = false;
 
-	var signinpanel = new Panel("signinpanel", "msntv:/Panels/signin.html",
+	var signinpanel = new Panel("signinpanel", "/Panels/signin.html",
 								APP_PANEL_TYPE, SLIDING_PANEL_STYLE,60,0,false);
 	// Customer Feedback and Report Panel
-	var cfarpanel = new Panel("cfarPanel", "msntv:/Shell/empty.html",
+	var cfarpanel = new Panel("cfarPanel", "/Shell/empty.html",
 							SYSTEM_PANEL_TYPE, POPUP_PANEL_STYLE, 60, 0, true);
 	cfarpanel.start = new CenteredRectangle(LARGE_DIALOG_WIDTH, LARGE_DIALOG_HEIGHT);
 	cfarpanel.end = new CenteredRectangle(LARGE_DIALOG_WIDTH, LARGE_DIALOG_HEIGHT);
 
 
 	// Popup window panel
-	var popuppanel              = new Panel("popuppanel", "msntv:/Shell/Empty.html", APP_PANEL_TYPE, STATIC_PANEL_STYLE, 51, 0, true);
+	var popuppanel              = new Panel("popuppanel", "/Shell/Empty.html", APP_PANEL_TYPE, STATIC_PANEL_STYLE, 51, 0, true);
 	popuppanel.start            = new FullRectangle(0,0,0,0);
 	popuppanel.end              = new FullRectangle(0,0,0,0);
 	popuppanel.refreshenabled   = true;
@@ -609,7 +609,7 @@
 			SetUserPanelAccel(impanel.name,        0,        VK_F8);  // F8
 		} else {
 			entry = TVShell.BuiltinServiceList.Add("Messenger");
-			entry.URL = "msntv:/OLTK/IMBlock.html";
+			entry.URL = "/OLTK/IMBlock.html";
 			entry.Safe = true;
 			entry.KeyCode = VK_F8;
 		}
@@ -630,7 +630,7 @@
 				g_DisplayNarrowbandTips = false;
 				g_DisplayingNarrowbandTips = true;
 				SetSlowNarrowbandTipsDisplayedDate();
-				panel.GotoURL("msntv:/connecting/SlowNarrowbandConnection.html");
+				panel.GotoURL("/connecting/SlowNarrowbandConnection.html");
 				setTimeout( 'PanelManager.Show(popuppanel.name);' , 500 );
 			}
 		}
@@ -682,7 +682,7 @@
 
 	function StopSlideShow()
 	{
-		if (IsMainPanelOnPage("msntv:/photo/SlideShow.html")) {
+		if (IsMainPanelOnPage("/photo/SlideShow.html")) {
 			//TVShell.Message("Shell.html: Stopping slide show");
 			mainPanel.GoBack();
 		}
@@ -751,7 +751,7 @@
         var re = /^http:\/\/spaces.(.+).com\/(.+)\/photos/;  
         var ret = re.exec(URL); 
         var alias = ret ? RegExp.$2 : null;
-        var dstURL = (alias && alias!="") ? "msntv:/Photo/PhotoOrganizer.html?state=organize&storage=online&alias=" + alias : "";
+        var dstURL = (alias && alias!="") ? "/Photo/PhotoOrganizer.html?state=organize&storage=online&alias=" + alias : "";
         return dstURL;
     }
 	
@@ -1093,7 +1093,7 @@
 
 		if (command == 'unsupportedCmd.exe' || command == 'unsupportedMedia.exe') {
 			HideProgressPanel();
-			setTimeout("mainPanel.GotoURL('msntv:/DocViewer/Error.html?error=UnsupportedContent')", 1);
+			setTimeout("mainPanel.GotoURL('/DocViewer/Error.html?error=UnsupportedContent')", 1);
 			result.Value = Result_Positive;
 		}
 	}
@@ -1221,7 +1221,7 @@
 			TVShell.PowerCause = "FullUpdate";
 			TVShell.ScreenSaver.CurrentSaver = "Butterfly";
 			var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-			entry.URL = "msntv:/Update/FullUpdate.html";
+			entry.URL = "/Update/FullUpdate.html";
 		}
 
 		// turn off audio if box is auto powered on
@@ -1237,7 +1237,7 @@
 		DeviceControl.PlaySound("Power_On");
 		playedHomeBrandSound = false;
 
-		TVShell.URL = "msntv:/Shell/PowerOn.html";
+		TVShell.URL = "/Shell/PowerOn.html";
 
 		InitializeServiceList();
 
@@ -1468,7 +1468,7 @@
 			DeviceControl.TVEncoder.OutputEnable = false;
 
 			// Remove the active page
-			TVShell.URL = "msntv:/Shell/PowerOff.html";
+			TVShell.URL = "/Shell/PowerOff.html";
 
 			// Persist print setting 
 			TVShell.PrintManager.SaveObject();
@@ -1673,7 +1673,7 @@
 	function AddSystemInfoServiceListEntry()
 	{
 		var entry = TVShell.BuiltinServiceList.Add("SystemInfo");
-		entry.URL = "msntv:/Settings/System/System.html";
+		entry.URL = "/Settings/System/System.html";
 		entry.Safe = true;
 		entry.KeyCode = VK_BROWSER_FAVORITES;
 	}
@@ -2245,7 +2245,7 @@
 								} else if (ButtonChoice == 2) {
 									LogOff();
 								} else {
-									TVShell.URL = "msntv:/Settings/CallWaitingExtra.html?reconnect=true";
+									TVShell.URL = "/Settings/CallWaitingExtra.html?reconnect=true";
 								}
 							} else {
 								var ButtonChoice = PanelManager.CustomMessageBox( Errortxt, "",
@@ -2254,7 +2254,7 @@
 								if (ButtonChoice == 0) {
 									setTimeout( 'LoginToService("connection::reconnect");' , 10 );
 								} else {
-									TVShell.URL = "msntv:/Settings/CallWaitingExtra.html";
+									TVShell.URL = "/Settings/CallWaitingExtra.html";
 								}
 							}
 							break;
@@ -2310,10 +2310,10 @@
 						// registration
 						//
 						if (IsRegistered())
-							TVShell.URL = "msntv:/Connecting/ConnectError.html"+
+							TVShell.URL = "/Connecting/ConnectError.html"+
 														"?ErrorMode=WAN&ErrorCode="+ErrorCode;
 						else
-							TVShell.URL = "msntv:/Registration/pages/ConnectError.html"+
+							TVShell.URL = "/Registration/pages/ConnectError.html"+
 														"?ErrorMode=WAN&ErrorCode="+ErrorCode;
 						break;
 				}
@@ -2737,7 +2737,7 @@
 				}
 
 				if (ErrorCode != ConnectError_NoError && ConnectCause == "LAN::Goto") {
-					TVShell.URL = "msntv:/Connecting/ConnectError.html"+
+					TVShell.URL = "/Connecting/ConnectError.html"+
 													"?ErrorMode=LAN&ErrorCode="+ErrorCode;
 				}
 
@@ -2833,20 +2833,20 @@
 				case 411:
 				{
 					var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-					entry.URL = "msntv:/Settings/System/System.html";
+					entry.URL = "/Settings/System/System.html";
 					break;
 				}
 				case 93288:
 				{
 					var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-					entry.URL = "msntv:/tvshell/Register.html";
-					TVShell.SetPagePatchURL( "msntv:/shell/blankppatch.xml");
+					entry.URL = "/tvshell/Register.html";
+					TVShell.SetPagePatchURL( "/shell/blankppatch.xml");
 					break;
 				}
 				case 10000:
 				{
 					var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-					entry.URL = "msntv:/Connecting/AboutToSynch.html?caller=updatecheck";
+					entry.URL = "/Connecting/AboutToSynch.html?caller=updatecheck";
 					TVShell.PowerOn("AutoUpdate");
 					break;
 				}
@@ -2854,13 +2854,13 @@
 					var entry = TVShell.BuiltinServiceList.Add("RunOnce");
 					// this is first mail check at anchor time
 					g_CurrentTask = GetTask(TVShell.TaskScheduler,EMAILCHECK_TASK_CALLER_NAME);
-					entry.URL = "msntv:/Connecting/AboutToSynch.html?caller=mailcheck0";
+					entry.URL = "/Connecting/AboutToSynch.html?caller=mailcheck0";
 					TVShell.PowerOn("AutoMailCheck");
 					break;
 				case 10002:
 					var entry = TVShell.BuiltinServiceList.Add("RunOnce");
 					// this is mail check different than the one at anchor time
-					entry.URL = "msntv:/Connecting/AboutToSynch.html?caller=mailcheck1";
+					entry.URL = "/Connecting/AboutToSynch.html?caller=mailcheck1";
 					TVShell.PowerOn("AutoMailCheck");
 					break;
 
@@ -2873,7 +2873,7 @@
 				case 80211:
 				{
 					var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-					entry.URL = "msntv:/Settings/Network/WirelessAdvanced.html";
+					entry.URL = "/Settings/Network/WirelessAdvanced.html";
 					break;
 				}
 					// bootrom secret codes		
@@ -2938,7 +2938,7 @@
 
 					if (mainPanel && mainPanel.Document) {
 						var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-						entry.URL = "msntv:/Settings/Spooky.html";
+						entry.URL = "/Settings/Spooky.html";
 					}
 
 					break;
@@ -2955,7 +2955,7 @@
 	{
        if (panelname=="main")
 	   {
-	       var urlmonuipanel = new Panel("URLMONUI", "msntv:/tvshell/urlmonui.htm",
+	       var urlmonuipanel = new Panel("URLMONUI", "/tvshell/urlmonui.htm",
 								  SYSTEM_PANEL_TYPE, POPUP_PANEL_STYLE,80,0,false);
            urlmonuipanel.start = new CenteredRectangle(300,240);
 		   urlmonuipanel.modal = true;
@@ -2968,7 +2968,7 @@
 
     function OnWININETDialog(panelname, hInternet,errorCode, errorData,info)
 	{
-	   var wininetuipanel = new Panel("WININETUI", "msntv:/tvshell/wininetui.htm",
+	   var wininetuipanel = new Panel("WININETUI", "/tvshell/wininetui.htm",
 							  SYSTEM_PANEL_TYPE, POPUP_PANEL_STYLE,80,0,false);
 	   wininetuipanel.start = new CenteredRectangle(420, 310);
 	   wininetuipanel.modal = true;
@@ -3032,7 +3032,7 @@
 			{
 				mainPanel.UserIntData=statusCode;
 				mainPanel.UserStrData=url;
-				mainPanel.GotoURL("msntv:/TVShell/errors.htm");
+				mainPanel.GotoURL("/TVShell/errors.htm");
 			}
 			OnNavigateComplete2(panelName, url, false);
 		}
@@ -3156,7 +3156,7 @@
 				{
 					TVShell.Message("Shell: OnMemoryStateChange -> low");
 				}
-				if(TVShell.URL != "msntv:/Shell/OutOfMemory.html")
+				if(TVShell.URL != "/Shell/OutOfMemory.html")
 				{
 					if(!TVShell.Utilities.IsMSNUrl(TVShell.URL) && !TVShell.Utilities.IsLocalUrl(TVShell.URL))
 					{	
@@ -3165,7 +3165,7 @@
 
 						TVShell.EventLog.Usage("Shell","LowPM=" + lowPM + "|LowVM=" + lowVM + "|URL="+TVShell.PanelManager.Item("main").Document.URL);
 						
-						TVShell.PanelManager.Item("main").Document.location.replace("msntv:/Shell/OutOfMemory.html")
+						TVShell.PanelManager.Item("main").Document.location.replace("/Shell/OutOfMemory.html")
 					}
 				}
 				break;
@@ -3213,13 +3213,13 @@
 					
 		TVShell.ScreenSaver.UserActive(); // Wakeup screen saver
 		
-		if (IsMainPanelOnPage("msntv:/Photo/MediaHelp.html"))
+		if (IsMainPanelOnPage("/Photo/MediaHelp.html"))
 			return;
-		if (IsMainPanelOnPage("msntv:/Photo/PhotoHome.html"))
+		if (IsMainPanelOnPage("/Photo/PhotoHome.html"))
 			return;
-		if (IsMainPanelOnPage("msntv:/Music/MusicHome.html"))
+		if (IsMainPanelOnPage("/Music/MusicHome.html"))
 			return;
-		if (IsMainPanelOnPage("msntv:/Video/VideoHome.html"))
+		if (IsMainPanelOnPage("/Video/VideoHome.html"))
 			return;
 		if (IsPhotoPickerPanelVisible())
 			return;
@@ -3249,7 +3249,7 @@
 					if (PanelManager.FocusedPanel && !PanelManager.FocusedPanel.Modal) {
 						PanelManager.Show("main");
 					}
-					mainPanel.GotoURL("msntv:/" + target + "/Viewer.html?location=0&StorageDeviceVN=" + escape(StorageDevice.VolumeName) + "&jump=true");
+					mainPanel.GotoURL("/" + target + "/Viewer.html?location=0&StorageDeviceVN=" + escape(StorageDevice.VolumeName) + "&jump=true");
                     setTimeout("MediaCustomboxUp = false", 1000);
                     return;
 				}
@@ -3311,10 +3311,10 @@
 			mainPanel.GotoURL(TVShell.ActiveServiceList.Item('home::home').URL);
 		
 		if (entry && entry.URL != "home::home") {
-			mainPanel.ClearTravelLog("msntv:/Settings/");
-			mainPanel.ClearTravelLog("msntv:/Help/");
-			mainPanel.ClearTravelLog("msntv:/tvshell/login.html");
-			mainPanel.ClearTravelLog("msntv:/tvshell/ForgotPassword.html");
+			mainPanel.ClearTravelLog("/Settings/");
+			mainPanel.ClearTravelLog("/Help/");
+			mainPanel.ClearTravelLog("/tvshell/login.html");
+			mainPanel.ClearTravelLog("/tvshell/ForgotPassword.html");
 		}
 		else {
 			mainPanel.ClearTravelLog();
@@ -3326,7 +3326,7 @@
 	{	
 		var currentURL = mainPanel.URL;	
 		currentURL = currentURL.toLowerCase();	
-		var retVal = (currentURL.indexOf("msntv:/music/radio.html") == 0) ? true : false;
+		var retVal = (currentURL.indexOf("/music/radio.html") == 0) ? true : false;
 		return retVal;
 	}
 	
@@ -3750,7 +3750,7 @@
 				modeNames[1] = L_SHELL_LAYOUT_NAME_FORCE_FIT1;
 				modeNames[2] = L_SHELL_LAYOUT_NAME_FORCE_FIT2;
 				var sound = "PageResizeWideView";
-				var animation = "msntv:/Panels/Images/PageResizeOut.gif";
+				var animation = "/Panels/Images/PageResizeOut.gif";
 					
 				if (++mode > 2) {
 					mode = 0;
@@ -3758,7 +3758,7 @@
 
 				if (mode == 1) {
 					sound = "PageResizeForceFit";
-					animation = "msntv:/Panels/Images/PageResizeIn.gif";
+					animation = "/Panels/Images/PageResizeIn.gif";
 				}
 
 				PanelManager.LayoutMode = mode;
@@ -3900,14 +3900,14 @@
 				TVShell.Message("ScreenSaver");
 				var ScreenSaverFileName = TVShell.PhotoManager.DevicePhotoPath;
 				ScreenSaverFileName+="ScreenSaver.txt";
-				var dstURL = "msntv:/Photo/SlideShow.html?startIndex=0&location=1&mode=ScreenSaver&tempAllFileList=" + ScreenSaverFileName;
+				var dstURL = "/Photo/SlideShow.html?startIndex=0&location=1&mode=ScreenSaver&tempAllFileList=" + ScreenSaverFileName;
 				TVShell.URL = dstURL;
 				return;
 			}
 			if (ServiceEntry.name == "Photo::grabber")
 			{
 				var mainpanel=PanelManager.Item("main");
-				if(mainpanel && mainpanel.Document.URL.indexOf("msntv:/")!=0)
+				if(mainpanel && mainpanel.Document.URL.indexOf("/")!=0)
 				{
 					ViewImages()
 					return;
@@ -3957,7 +3957,7 @@
 			var ContentSync	= new ActiveXObject("MSNTV.ContentSync");
 			var ImageListFilePath = ContentSync.UserDataPath+"\\Photo\\Settings\\PageImageList.txt";
 			TVShell.Utilities.CreateTextFile(ImageListFilePath, data);
-			PanelManager.Item("main").GotoURL("msntv:/photo/Viewer.html?FromImageListFile=true");
+			PanelManager.Item("main").GotoURL("/photo/Viewer.html?FromImageListFile=true");
 			PanelManager.Show("main");
 		}
 
@@ -4051,7 +4051,7 @@
 			// If we're off, then power on temporarily to do the check
 			if (!TVShell.IsOn) {
 				var entry = TVShell.BuiltinServiceList.Add("RunOnce");
-				entry.URL = "msntv:/Connecting/AboutToSynch.html?caller=updatecheck";
+				entry.URL = "/Connecting/AboutToSynch.html?caller=updatecheck";
 				TVShell.PowerOn("AutoUpdate");
 				break;
 			}
@@ -4096,9 +4096,9 @@
 			if (!TVShell.IsOn) {
 				var entry = TVShell.BuiltinServiceList.Add("RunOnce");
 				if(taskEntry.Once == 0)
-					entry.URL = "msntv:/Connecting/AboutToSynch.html?caller=mailcheck0";
+					entry.URL = "/Connecting/AboutToSynch.html?caller=mailcheck0";
 				else
-					entry.URL = "msntv:/Connecting/AboutToSynch.html?caller=mailcheck1";				    
+					entry.URL = "/Connecting/AboutToSynch.html?caller=mailcheck1";				    
 				
 				TVShell.Message("----------power on to start mail check-----------------");
 				TVShell.IdleTime = 0;
@@ -4786,7 +4786,7 @@
     
     function OnLocaleChanged()
 	{
-		document.all.ShellResourceFile.src="msntv:/msntv_shell_loc.js";
+		document.all.ShellResourceFile.src="/msntv_shell_loc.js";
 	}
 
     //Set Locale

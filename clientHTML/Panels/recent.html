@@ -10,7 +10,7 @@
 <link rel=StyleSheet type="text/css" href="../CSS/Panel.css">
 
 <script language="Javascript" src="../Javascript/TVShell.js"></script>
-<script language="Javascript" src="msntv:/msntv_recent_loc.js"></script>
+<script language="Javascript" src="/msntv_recent_loc.js"></script>
 <script language="Javascript" src="../Javascript/PanelImpl.js"></script>
 <script language="Javascript" src="../Javascript/VKCodes.js"></script>
 
@@ -43,7 +43,7 @@
         var PanelHistory=mainPanel.History;
 		entries.length = 0;
 		for (i = 0; i < count; i++) {
-			var thumb = "msntv:/Images/PanelNoImage.jpg";
+			var thumb = "/Images/PanelNoImage.jpg";
 			if ( PanelHistory.RecentEntry(i).ThumbnailExists() )
 				thumb = "file://" +PanelHistory.RecentEntry(i).ThumbnailPath;
 			entries[i] = new Entry(PanelHistory.RecentEntry(i).URL,

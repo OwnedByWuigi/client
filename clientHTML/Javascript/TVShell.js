@@ -1,21 +1,17 @@
 //
 // TVShell.js
 //
-var TVShell = new ActiveXObject("MSNTV.TVShell");
-var mainPanel  = TVShell.PanelManager.Item("main");
+//var TVShell = new ActiveXObject("MSNTV.TVShell"); fuck this shit
+//var mainPanel  = TVShell.PanelManager.Item("main");
 var UNDER_CE = null;
 var UNDER_NT = null;
 
-if ( TVShell.SystemInfo.OSType == "CE" )
-	UNDER_CE = TVShell.SystemInfo.OSVersion;
-else if ( TVShell.SystemInfo.OSType == "NT" )
-	UNDER_NT = TVShell.SystemInfo.OSVersion;
 
-var ServiceShortName = TVShell.SystemInfo.ServiceShortName;
-var ProductShortName = TVShell.SystemInfo.ProductShortName;
-var ProductNickname = TVShell.SystemInfo.ProductNickname;
-var ServiceFullName = TVShell.SystemInfo.ServiceFullName;
-var CustomerCareNumber = "1-866-466-7688";
+var ServiceShortName = "MSN TV";
+var ProductShortName = "tv2js emulator";
+var ProductNickname = "tv2js emulator";
+var ServiceFullName = "MSN TV";
+var CustomerCareNumber = "0";
 
 
 
@@ -111,7 +107,7 @@ function IsMainPanelInDocViewer()
 {	
 	var currentURL = mainPanel.URL;	
 	currentURL = currentURL.toLowerCase();	
-	var retVal = (currentURL.indexOf("msntv:/docviewer/docviewer.htm") == 0) ? true : false;
+	var retVal = (currentURL.indexOf("/docviewer/docviewer.htm") == 0) ? true : false;
 	return retVal;
 }
 
@@ -119,7 +115,7 @@ function IsMainPanelInPhotoViewer()
 {	
 	var currentURL = mainPanel.URL;	
 	currentURL = currentURL.toLowerCase();	
-	var retVal = (currentURL.indexOf("msntv:/photo/viewer.html") == 0) ? true : false;
+	var retVal = (currentURL.indexOf("/photo/viewer.html") == 0) ? true : false;
 	return retVal;
 }
 

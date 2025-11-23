@@ -46,9 +46,9 @@
 
 	// Initialize the main panel
 
-	TVShell.PopupWhitelistURL = "msntv:/Shell/PopupControl.xml";
+	TVShell.PopupWhitelistURL = "/Shell/PopupControl.xml";
 	
-	TVShell.RedirectListURL = "msntv:/Shell/RedirectControl.xml";
+	TVShell.RedirectListURL = "/Shell/RedirectControl.xml";
 
 	var PanelManager;
 	var MainPanel;
@@ -59,7 +59,7 @@
 	// reset the layout mode to force-fit
 	PanelManager.LayoutMode = 1;
 
-	PanelManager.CreatePanel("main", "msntv:/Shell/empty.html", 50, false);
+	PanelManager.CreatePanel("main", "/Shell/empty.html", 50, false);
 
 	MainPanel = PanelManager.Item("main");
 
@@ -122,19 +122,19 @@
 	var Saver;
 
 	Saver = ScreenSaver.Add("Blank");
-	Saver.URL = "msntv:/Settings/ScreenSaver/Blank.html";
+	Saver.URL = "/Settings/ScreenSaver/Blank.html";
 	Saver.Description = "Blank";
 
 	Saver = ScreenSaver.Add("Prereg");
-	Saver.URL = "msntv:/Settings/ScreenSaver/Prereg.html";
+	Saver.URL = "/Settings/ScreenSaver/Prereg.html";
 	Saver.Description = "Pre-registration text";
 
 	Saver = ScreenSaver.Add("Butterfly");
-	Saver.URL = "msntv:/Settings/ScreenSaver/Butterfly.html";
+	Saver.URL = "/Settings/ScreenSaver/Butterfly.html";
 	Saver.Description = "Flying Butterfly";
 
 	Saver = ScreenSaver.Add("Photo");
-	Saver.URL = "msntv:/Settings/ScreenSaver/Photo.html";
+	Saver.URL = "/Settings/ScreenSaver/Photo.html";
 	Saver.Description = "Photo slides";
 
 	//

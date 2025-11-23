@@ -54,7 +54,7 @@ function Init()
 				"<tr>" +
 				"	<td align=right style='padding:0px;" + leftEndCapSize +"'><span style='" + leftEndCapSize + ";behavior:url(#default#alphaImageLoader);src:url(../Images/ProgressBarLeftEdge.png)'></span></td>" +
 				"	<td style='width:100%;behavior: url(#default#alphaImageLoader); src:url(../Images/ProgressBarCustomMiddleStretch.png);' id=innerTD>" +
-				"		<div style='width:0;height:12px;overflow:hidden;background-image:url(msntv:/Shared/Images/ProgressBarCustomFill.png);position: relative;margin-left:-2px;margin-right:-2px;' id=innerDIV></div></td>" +
+				"		<div style='width:0;height:12px;overflow:hidden;background-image:url(/Shared/Images/ProgressBarCustomFill.png);position: relative;margin-left:-2px;margin-right:-2px;' id=innerDIV></div></td>" +
 				"	<td align=right style='padding:0px;" + rightEndCapSize +"'><span style='" + rightEndCapSize + ";behavior:url(#default#alphaImageLoader);src:url(../Images/ProgressBarRightEdge.png)'></span></td>" +
 				"</tr></table>";
 /*

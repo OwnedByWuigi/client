@@ -159,6 +159,6 @@ function GetDMRHelpURL(which)
 		return GetPaneHelpURL(PH_topicTOC, which+".htm");
 	}
 	else {
-		return "msntv:/Help/" + which + "_Offline_v11.htm";
+		return "/Help/" + which + "_Offline_v11.htm";
 	}
 }

@@ -1,4 +1,4 @@
-<html xmlns:msntv> <?import namespace="msntv" implementation="msntv:/HTC/CustomButton.htc"> <?IMPORT namespace="msntv" implementation="msntv:/HTC/SettingsHeading.htc"> <?IMPORT namespace="msntv" implementation="msntv:/HTC/Progress.htc"><HEAD> <TITLE>HomeNetworking</TITLE><link rel=StyleSheet type="text/css" href="msntv:/CSS/Settings.css"> <SCRIPT language="Javascript" src="msntv:/Javascript/TVShell.js"></SCRIPT> <SCRIPT language="Javascript" src="msntv:/Javascript/ConnectionManager.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/Parameters.js"></SCRIPT> <script language="Javascript" src="msntv:/Javascript/StatusPanel.js"></script> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/SettingsTemplate.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/HomeNetworking.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/ProgressPanel.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/ContentPaneHelp.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/Provisioning.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/DMREnumerate.js"></SCRIPT> <style type="text/css"> .titleDiv { width: 100%; } </style> <script language="javascript">
+<html xmlns:msntv> <?import namespace="msntv" implementation="/HTC/CustomButton.htc"> <?IMPORT namespace="msntv" implementation="/HTC/SettingsHeading.htc"> <?IMPORT namespace="msntv" implementation="/HTC/Progress.htc"><HEAD> <TITLE>HomeNetworking</TITLE><link rel=StyleSheet type="text/css" href="/CSS/Settings.css"> <SCRIPT language="Javascript" src="/Javascript/TVShell.js"></SCRIPT> <SCRIPT language="Javascript" src="/Javascript/ConnectionManager.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/Parameters.js"></SCRIPT> <script language="Javascript" src="/Javascript/StatusPanel.js"></script> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/SettingsTemplate.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/HomeNetworking.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/ProgressPanel.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/ContentPaneHelp.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/Provisioning.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/DMREnumerate.js"></SCRIPT> <style type="text/css"> .titleDiv { width: 100%; } </style> <script language="javascript">
 var parameters	= FindParameters(TVShell.PanelManager);
 
 var mainPanel = TVShell.PanelManager.Item("main");
@@ -59,7 +59,7 @@ function GetHNHelpURL(page)
 	var bOnline = TVShell.IsUserAuthorizedandConnected;
 
 	// always go to top TOC if off line
-	if ( !bOnline ) return "msntv:/Help/MSNTV_PROC_SINGLE_HomeNet_Intro_v11.htm";
+	if ( !bOnline ) return "/Help/MSNTV_PROC_SINGLE_HomeNet_Intro_v11.htm";
 	
 	return GetPaneHelpURL(PH_topicTOC,  page );
 }
@@ -199,7 +199,7 @@ function OnLoad() {
 	if ( parameters["addhost"] )
 	{
 		TVShell.Message('Onload - add');
-		HNHelpURL = "msntv:/Help/MSNTV_PROC_SINGLE_HomeNet_FindComputerName_v11.htm";
+		HNHelpURL = "/Help/MSNTV_PROC_SINGLE_HomeNet_FindComputerName_v11.htm";
 		AddHost();
 		return;
 	}
@@ -494,7 +494,7 @@ function NavigateToMediaApp( he , se , sd )
 	{
 		if (canAccessOfflineApp())
 		{
-			target = "msntv:/"+target+"/viewer.html?location=2&StorageDeviceVN="+encodeURIComponent( sd.VolumeName );
+			target = "/"+target+"/viewer.html?location=2&StorageDeviceVN="+encodeURIComponent( sd.VolumeName );
 			document.location = target;
 		}
 		else
@@ -1196,7 +1196,7 @@ function HideProgress()
 </script> </HEAD><BODY onload="return OnLoad();"> <script language=Javascript>
 
 if (HNHelpURL == "")
-	HNHelpURL = "msntv:/Help/MSNTV_PROC_SINGLE_HomeNet_Intro_v11.htm";
+	HNHelpURL = "/Help/MSNTV_PROC_SINGLE_HomeNet_Intro_v11.htm";
 
 OpenSettingsTable( "Settings" , "Home network" , HNHelpURL );
 

@@ -18,8 +18,8 @@
 <PUBLIC:PROPERTY NAME="preemptivescroll" value="true" />
 <PUBLIC:PROPERTY NAME="scrollbarrightoffset" value=2 />
 <PUBLIC:PROPERTY NAME="leavespaceforscrollbar" value="true" />
-<PUBLIC:PROPERTY NAME="uparrowsrc" value="msntv:/Shared/Images/ScrollIndicatorUpGlobal.png" />	<!-- equivalent to style.upArrowSrc -->
-<PUBLIC:PROPERTY NAME="downarrowsrc" value="msntv:/Shared/Images/ScrollIndicatorDownGlobal.png" />	<!-- equivalent to style.downArrowSrc -->
+<PUBLIC:PROPERTY NAME="uparrowsrc" value="/Shared/Images/ScrollIndicatorUpGlobal.png" />	<!-- equivalent to style.upArrowSrc -->
+<PUBLIC:PROPERTY NAME="downarrowsrc" value="/Shared/Images/ScrollIndicatorDownGlobal.png" />	<!-- equivalent to style.downArrowSrc -->
 <PUBLIC:PROPERTY NAME="arrowwidth" value=18 />						<!-- equivalent to style.arrowWidth -->
 <PUBLIC:PROPERTY NAME="typeToScroll" value="false" />
 <PUBLIC:PROPERTY NAME="assumeEverythingsVisible" value="false" />
@@ -38,7 +38,7 @@
 </PUBLIC:COMPONENT>
 
 
-<SCRIPT LANGUAGE="Javascript" SRC="msntv:/Javascript/TVShell.js"></SCRIPT>
+<SCRIPT LANGUAGE="Javascript" SRC="/Javascript/TVShell.js"></SCRIPT>
 <SCRIPT>
 
 // the following is necessary to make IE respect the "bottom" attribute set in CSS

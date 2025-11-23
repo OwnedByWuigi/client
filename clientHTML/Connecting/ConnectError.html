@@ -39,7 +39,7 @@
 	{
 		TVShell.PanelManager.Item('main').NoBackToMe = true;
 		if ( TVShell.ConnectionManager.WANCause == "FullUpdate" ) {
-			document.location = "msntv:/Update/FullUpdate.html";
+			document.location = "/Update/FullUpdate.html";
 			return;
 		}
 		if (parameters["ErrorMode"] == "LAN") {
@@ -51,15 +51,15 @@
 	function GotoSettings()
 	{
 		if (parameters["ErrorMode"] == "LAN") {
-			document.location.replace("msntv:/Settings/ConnectionSettings.html?LANSetup=1");
+			document.location.replace("/Settings/ConnectionSettings.html?LANSetup=1");
 		} else if (ConnectError_BYOADialSettingsInvalid == ErrorCode) {
-			var conPage = escape("msntv:/Settings/Settings.html");
-			document.location = "msntv:/Settings/ISPInfo.html?onSuccess=" + conPage;
+			var conPage = escape("/Settings/Settings.html");
+			document.location = "/Settings/ISPInfo.html?onSuccess=" + conPage;
 		} else if (ConnectError_LineInUse == ErrorCode || 
 				ConnectError_NoDialTone == ErrorCode) {
-			document.location = "msntv:/Settings/BasicDialing.html#DONT_WAIT?focus=dontWait";
+			document.location = "/Settings/BasicDialing.html#DONT_WAIT?focus=dontWait";
 		} else {
-			document.location = "msntv:/Settings/ConnectionSettings.html?confirm=true";
+			document.location = "/Settings/ConnectionSettings.html?confirm=true";
 		}
 	}
 
@@ -71,12 +71,12 @@
 
 	function GotoSensitivity()
 	{
-		document.location="msntv:/Settings/CallWaitingExtra.html";
+		document.location="/Settings/CallWaitingExtra.html";
 	}
 
 	function GotoOffHook()
 	{
-		document.location="msntv:/Settings/OffHook.html";
+		document.location="/Settings/OffHook.html";
 	}
 </SCRIPT>
 

@@ -651,8 +651,8 @@ function OnBeforeShow(name)
 function OnAfterHide(name)
 {
 	if (name == "impanel") {
-		im_bg.background = "msntv:/Images/1x1.gif";
-		im_top.background = "msntv:/Images/1x1.gif";
+		im_bg.background = "/Images/1x1.gif";
+		im_top.background = "/Images/1x1.gif";
 	}
 }
 
@@ -2528,7 +2528,7 @@ function ProcessAddContact(index)
 		   + "	<tr><td>Choose <b>Done</b> to return to your contact list.</td></tr>"
 		   + "	<tr><td height=10></td></tr>";
     */
-		   TVShell.PanelManager.AnimationMessageBox("Contact added", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 1500);
+		   TVShell.PanelManager.AnimationMessageBox("Contact added", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 1500);
 		   setTimeout("ShowListPanel()",1500);
 		   return;
 	}
@@ -3665,7 +3665,7 @@ function PageUnload()
 				<table cellpadding=0 cellspacing=0 border=0 style="margin:10px 15px 0px 6px;">
 					<tr><td><msntv:CustomButton id="Add_New_Contact" class="sidebarButton" style="width:139px" label="Add a Contact" onClick="ProcessAddContact(0);" /></td></tr>
 					<tr><td height=4></td></tr>
-					<tr><td><msntv:CustomButton id="Edit_A_Contact" class="sidebarButton" style="width:139px" label="Delete Contacts" onClick="ShowMainPanelWithURL('msntv:/IM/msnIMContactList.html');" /></td></tr>
+					<tr><td><msntv:CustomButton id="Edit_A_Contact" class="sidebarButton" style="width:139px" label="Delete Contacts" onClick="ShowMainPanelWithURL('/IM/msnIMContactList.html');" /></td></tr>
 				</table></td></tr>
 	</table>
 </div>
@@ -3835,7 +3835,7 @@ function PageUnload()
 			<table width=100% height=100% cellSpacing=0 cellPadding=0 border=0>
 				<tr><td width=15 height=100% background="images/IM_TopLeftCorner.jpg">
 					</td>
-					<td id="im_top" height=100% background="msntv:/Images/1x1.gif">
+					<td id="im_top" height=100% background="/Images/1x1.gif">
 						<table width=100% height=100% cellSpacing=0 cellPadding=0 border=0>
 							<tr><td height=37 width=100%>
 									<table cellSpacing=0 cellPadding=0 border=0>
@@ -3847,13 +3847,13 @@ function PageUnload()
 											<td align=right>
 												<table height=100% cellSpacing=0 cellPadding=0 border=0 align=right>
 													<tr><td height=5></td></tr>
-													<tr><td><a tabindex=0 id=Setting onClick="ShowMainPanelWithURL('msntv:/IM/msnIMSetting.html');"><font class=headerTitle>Settings</font></a></td>
+													<tr><td><a tabindex=0 id=Setting onClick="ShowMainPanelWithURL('/IM/msnIMSetting.html');"><font class=headerTitle>Settings</font></a></td>
 														<td width=10></td>
 														<td><a tabindex=0 id=Help onClick="ShowMainPanelWithURL(GetPaneHelpURL(PH_topicTOC, 'MSNTV_TRS_TOC_Msgr.htm'))">
 																<table cellSpacing=0 cellPadding=0 border=0>
 																	<tr><td><font class=headerTitle>Help</font></td>
 																		<td width=4></td>
-																		<td style="padding:0px; height:20px; width:20px; behavior:url(#default#alphaImageLoader);src:url(msntv:/Shared/images/Icon_Help_RelatedLink.png);"></td></tr>
+																		<td style="padding:0px; height:20px; width:20px; behavior:url(#default#alphaImageLoader);src:url(/Shared/images/Icon_Help_RelatedLink.png);"></td></tr>
 																</table></a></td></tr>
 												</table></td></tr>
 									</table></td></tr>
@@ -3886,7 +3886,7 @@ function PageUnload()
 			</table>
 		</td></tr>
 	<tr><td><table cellSpacing=0 cellPadding=0 border=0 width=100% height=264>
-				<tr><td width=15 bgcolor=#5AAFFF></td><td id="im_bg" width=530 background="msntv:/Images/1x1.gif"></td><td width=15 bgcolor=#5AAFFF></td></tr>
+				<tr><td width=15 bgcolor=#5AAFFF></td><td id="im_bg" width=530 background="/Images/1x1.gif"></td><td width=15 bgcolor=#5AAFFF></td></tr>
 			</table></td></tr>
 	<tr><td height=1 bgcolor=#77ACE6></td></tr>
 </table>

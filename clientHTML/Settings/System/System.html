@@ -1,4 +1,4 @@
-<HTML xmlns:msntv> <?IMPORT namespace="msntv" implementation="../../HTC/CustomButton.htc"> <?IMPORT namespace="msntv" implementation="../../HTC/SettingsHeading.htc"> <TITLE>System Info</TITLE> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/TVShell.js"></SCRIPT> <SCRIPT language="Javascript" src="msntv:/Javascript/ConnectionManager.js"></SCRIPT><LINK REL="StyleSheet" TYPE="text/css" HREF="../../CSS/Settings.css"> <script LANGUAGE=Javascript>
+<HTML xmlns:msntv> <?IMPORT namespace="msntv" implementation="../../HTC/CustomButton.htc"> <?IMPORT namespace="msntv" implementation="../../HTC/SettingsHeading.htc"> <TITLE>System Info</TITLE> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/TVShell.js"></SCRIPT> <SCRIPT language="Javascript" src="/Javascript/ConnectionManager.js"></SCRIPT><LINK REL="StyleSheet" TYPE="text/css" HREF="../../CSS/Settings.css"> <script LANGUAGE=Javascript>
 var SystemInfo = TVShell.SystemInfo;
 var gMemoryThreshold = null;
 var virtualThreshold = 0;
@@ -52,7 +52,7 @@ function goCrashMe()
 
 </script> </HEAD><BODY onload="init()"> <msntv:SettingsHeading label="System Information" /><DIV id=buttonBar> <SCRIPT>
 		if ((history.length > 0) && (!TVShell.UserManager.CurrentUser || !TVShell.UserManager.CurrentUser.IsAuthorized)) {
-			document.write("<msntv:CustomButton href='msntv:/Settings/ConnectHistory.html' class=buttonBarButton id=History label='Connection History' />");
+			document.write("<msntv:CustomButton href='/Settings/ConnectHistory.html' class=buttonBarButton id=History label='Connection History' />");
 		}
 </SCRIPT> <msntv:CustomButton href="javascript:history.length > 0 ? history.go(-1) : TVShell.PowerOff()" class=buttonBarButton id=Done label="Done" /> <script>document.all("Done").focus();</script> </DIV><DIV id=nonScrollArea> <br><TABLE class=controlTable> <TR> <TD ALIGN="RIGHT"> Model: <TD ID="Platform" ALIGN="LEFT"> <TR> <TD ALIGN="RIGHT"> Box ID: <TD ID="BoxID" ALIGN="LEFT"> <TR> <TD ALIGN="RIGHT"> Software: <TD ID="Version" ALIGN="LEFT"> <TR> <TD ALIGN="RIGHT"> Boot ROM: <TD ID="BootROMVers" ALIGN="LEFT"> <TR> <TD ALIGN="RIGHT"> Memory: <TD ID="PhysMem" ALIGN="LEFT"> <TR id="systemHealthSection" style="display:none;"> <TD ALIGN="RIGHT"> System Health: <TD><table><tr><td id="systemHealthStatus">OK</td><td id="crashMeButt" style="display:none;"><msntv:CustomButton id="crashMe" label="Reset System" onclick="goCrashMe();" /></td></tr></table></td> </TR> <TR> <TD ALIGN="RIGHT"> Storage: <TD ID="Flash" ALIGN="LEFT"> <SCRIPT>
 		var VersionString = ServiceShortName + " ";

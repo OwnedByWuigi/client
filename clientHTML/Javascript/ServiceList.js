@@ -13,13 +13,13 @@ function InitializeServiceList(PowerCause)
 	ServiceList.Restore();
 
 	entry = BuiltinServiceList.Add("SignOn");
-	entry.URL = "msntv:/TVShell/login.html";
+	entry.URL = "/TVShell/login.html";
 
 	entry = BuiltinServiceList.Add("Settings");
-	entry.URL = "msntv:/Settings/Settings.html";
+	entry.URL = "/Settings/Settings.html";
 
 	entry = BuiltinServiceList.Add("OPW::Main");
-	entry.URL = "msntv:/OPW/OPWMain.html";
+	entry.URL = "/OPW/OPWMain.html";
 
 	entry = BuiltinServiceList.Add("connection::prereg");
 	entry.URL = MSNTVServiceList[0].URL;
@@ -50,7 +50,7 @@ function InitializeServiceList(PowerCause)
 	entry.KeyCode = VK_SUBTRACT;
 
 	entry = BuiltinServiceList.Add("SystemInfo::home");
-	entry.URL = "msntv:/Settings/System/System.html";
+	entry.URL = "/Settings/System/System.html";
 
 	entry = BuiltinServiceList.Add("browser::showpopup");
 	entry.Charcode = "P".charCodeAt(0) & 0x1F;
@@ -64,7 +64,7 @@ function InitializeServiceList(PowerCause)
 		entry.SysCharCode = "z".charCodeAt(0);
 
 		entry = BuiltinServiceList.Add("Tricks");
-		entry.URL = "msntv:/Test/Tricks.html";
+		entry.URL = "/Test/Tricks.html";
 		entry.SysCharCode = "c".charCodeAt(0);
 
 		entry = BuiltinServiceList.Add("CaptureScreen");
@@ -86,85 +86,85 @@ function InitializeOfflineServices()
 	var entry;
 
 	entry = BuiltinServiceList.Add("Settings::HomeNetwork");
-	entry.URL = "msntv:/Settings/Network/HomeNetworking.html";
+	entry.URL = "/Settings/Network/HomeNetworking.html";
 	entry.Safe = true;
 
 	entry = BuiltinServiceList.Add("Photo::Home");
-	entry.URL = "msntv:/Photo/PhotoHome.html";
+	entry.URL = "/Photo/PhotoHome.html";
 	entry.Safe = true;
 	entry.KeyCode = VK_F12;
 	entry.ProvisioningRequired = true;
 	
 	entry = BuiltinServiceList.Add("Photo::Albums");
-	entry.URL = "msntv:/Photo/PhotoOrganizer.html?state=organize&storage=local";
+	entry.URL = "/Photo/PhotoOrganizer.html?state=organize&storage=local";
 	
 	entry = BuiltinServiceList.Add("Photo::OnlineStorage");
-	entry.URL = "msntv:/Photo/PhotoOrganizer.html?state=organize&storage=online";
+	entry.URL = "/Photo/PhotoOrganizer.html?state=organize&storage=online";
 	
 	entry = BuiltinServiceList.Add("Photo::Organizer");
-	entry.URL = "msntv:/Photo/PhotoOrganizer.html";
+	entry.URL = "/Photo/PhotoOrganizer.html";
 	
 	entry = BuiltinServiceList.Add("Photo::ChangeScreenSaver");
-	entry.URL = "msntv:/Photo/PhotoOrganizer.html?state=screensaver&storage=local";
+	entry.URL = "/Photo/PhotoOrganizer.html?state=screensaver&storage=local";
 	
 	entry = BuiltinServiceList.Add("Photo::AttachmentViewer");
-	entry.URL = "msntv:/Photo/Viewer.html?AttachmentViewer=true";
+	entry.URL = "/Photo/Viewer.html?AttachmentViewer=true";
 		
 	if (TVShell.Property("MusicFeature")) {
 		entry = BuiltinServiceList.Add("Music::Home");
-		entry.URL = "msntv:/Music/MusicHome.html";
+		entry.URL = "/Music/MusicHome.html";
 		entry.KeyCode = VK_F10;
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 
 		entry = BuiltinServiceList.Add("Music::SongList");
-		entry.URL = "msntv:/Music/SongList.html";
+		entry.URL = "/Music/SongList.html";
 		
 		entry = BuiltinServiceList.Add("Music::Settings");
-		entry.URL = "msntv:/Settings/WMPVisualization.html";
+		entry.URL = "/Settings/WMPVisualization.html";
 		entry.Safe = true;
 	}
 	
 	if (TVShell.Property("VideoFeature")) {
 		entry = BuiltinServiceList.Add("Video::Home");
-		entry.URL = "msntv:/Video/VideoHome.html";
+		entry.URL = "/Video/VideoHome.html";
 		entry.KeyCode = VK_F11;
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 
 		// for backward compat w/ video home
 		entry = BuiltinServiceList.Add("Video");
-		entry.URL = "msntv:/Video/VideoHome.html";
+		entry.URL = "/Video/VideoHome.html";
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 		
 		entry = BuiltinServiceList.Add("Video::HomeNetworking");
-		entry.URL = "msntv:/MediaNav/MediaNav.html?fromApplication=video&mediaLocation=pc";
+		entry.URL = "/MediaNav/MediaNav.html?fromApplication=video&mediaLocation=pc";
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 	}
 
 	if (TVShell.Property("GameFeature")) {
 		entry = BuiltinServiceList.Add("Game");
-		entry.URL = "msntv:/Game/GameHome.html";
+		entry.URL = "/Game/GameHome.html";
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 	}
 
 	entry = BuiltinServiceList.Add("Chat");
-	entry.URL = "msntv:/OLTK/chatBlock.html";
+	entry.URL = "/OLTK/chatBlock.html";
 	entry.Safe = true;
 		
 	entry = BuiltinServiceList.Add("mail::listmail");
-	entry.URL = "msntv:/OLTK/EmailBlock.html";
+	entry.URL = "/OLTK/EmailBlock.html";
 	entry.Safe = true;
 	
 	entry = BuiltinServiceList.Add("Help");
-	entry.URL = "msntv:/Help/Contents.html";
+	entry.URL = "/Help/Contents.html";
 	entry.KeyCode = VK_HELP;
 
 	entry = BuiltinServiceList.Add("media::default");
-	entry.URL = "msntv:/Music/MusicHome.html";
+	entry.URL = "/Music/MusicHome.html";
 
 	entry = BuiltinServiceList.Add("favorite::shortcut1");
 	entry.KeyCode = VK_F1;
@@ -236,24 +236,24 @@ function RestoreFeatures()
 	var entry;
 
 	entry = BuiltinServiceList.Add("Settings::HomeNetwork");
-	entry.URL = "msntv:/Settings/Network/HomeNetworking.html";
+	entry.URL = "/Settings/Network/HomeNetworking.html";
 	entry.Safe = true;
 
 	entry = BuiltinServiceList.Add("Photo::Home");
-	entry.URL = "msntv:/Photo/PhotoHome.html";
+	entry.URL = "/Photo/PhotoHome.html";
 	entry.Safe = true;
 	entry.KeyCode = VK_F12;
 	entry.ProvisioningRequired = true;
 	
 	entry = BuiltinServiceList.Add("Photo::Albums");
-	entry.URL = "msntv:/Photo/PhotoOrganizer.html?state=organize&storage=local";
+	entry.URL = "/Photo/PhotoOrganizer.html?state=organize&storage=local";
 	
 	entry = BuiltinServiceList.Add("Photo::OnlineStorage");
-	entry.URL = "msntv:/Photo/PhotoOrganizer.html?state=organize&storage=online";
+	entry.URL = "/Photo/PhotoOrganizer.html?state=organize&storage=online";
 		
 	if (TVShell.Property("MusicFeature")) {
 		entry = BuiltinServiceList.Add("Music::Home");
-		entry.URL = "msntv:/Music/MusicHome.html";
+		entry.URL = "/Music/MusicHome.html";
 		entry.KeyCode = VK_F10;
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
@@ -261,33 +261,33 @@ function RestoreFeatures()
 	
 	if (TVShell.Property("VideoFeature")) {
 		entry = BuiltinServiceList.Add("Video::Home");
-		entry.URL = "msntv:/Video/VideoHome.html";
+		entry.URL = "/Video/VideoHome.html";
 		entry.KeyCode = VK_F11;
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 
 		// for backward compat w/ video home
 		entry = BuiltinServiceList.Add("Video");
-		entry.URL = "msntv:/Video/VideoHome.html";
+		entry.URL = "/Video/VideoHome.html";
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 		
 		entry = BuiltinServiceList.Add("Video::HomeNetworking");
-		entry.URL = "msntv:/MediaNav/MediaNav.html?fromApplication=video&mediaLocation=pc";
+		entry.URL = "/MediaNav/MediaNav.html?fromApplication=video&mediaLocation=pc";
 		entry.Safe = true;
 		entry.ProvisioningRequired = true;
 	}
 
 	entry = BuiltinServiceList.Add("Chat");
-	entry.URL = "msntv:/OLTK/chatBlock.html";
+	entry.URL = "/OLTK/chatBlock.html";
 	entry.Safe = true;
 		
 	entry = BuiltinServiceList.Add("mail::listmail");
-	entry.URL = "msntv:/OLTK/EmailBlock.html";
+	entry.URL = "/OLTK/EmailBlock.html";
 	entry.Safe = true;
 	
 	entry = BuiltinServiceList.Add("media::default");
-	entry.URL = "msntv:/Music/MusicHome.html";
+	entry.URL = "/Music/MusicHome.html";
 
 	entry = BuiltinServiceList.Add("favorite::shortcut1");
 	entry.KeyCode = VK_F1;
@@ -339,7 +339,7 @@ function GotoSignOn()
 				ScreenSaver.CurrentSaver = "Butterfly";
 			}
 		}
-		if (TVShell.BuiltinServiceList.Item("home::target") && !IsMainPanelOnPage("msntv:/tvshell/login.html")) {
+		if (TVShell.BuiltinServiceList.Item("home::target") && !IsMainPanelOnPage("/tvshell/login.html")) {
 			var CurrentUser = TVShell.UserManager.CurrentUser;	
 			if (CurrentUser)
 				CurrentUser.ServiceList.Remove("home::target");
@@ -351,7 +351,7 @@ function GotoSignOn()
 		}
 	}
 	else if (SystemInfo.Flavor == "release" || SystemInfo.Flavor == "ppe") {
-		TVShell.URL = "msntv:/Registration/pages/Welcome.html";
+		TVShell.URL = "/Registration/pages/Welcome.html";
 	}
 	else {
 		if (showError) {
@@ -362,7 +362,7 @@ function GotoSignOn()
 			}
 		}
 
-		TVShell.URL = "msntv:/tvshell/Register.html";
+		TVShell.URL = "/tvshell/Register.html";
 	}
 	
 	return false;

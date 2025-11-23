@@ -93,7 +93,7 @@ function ShareUnavailableMessageBox( he, se, status, isPanel )
 				default:
 					break;
 				case 0:
-					TVShell.URL = "msntv:/Help/MSNTV_OFFLINE_TOC_main.htm";
+					TVShell.URL = "/Help/MSNTV_OFFLINE_TOC_main.htm";
 					if (isPanel) {
 						TVShell.PanelManager.Remove(window.name);
 					}
@@ -113,7 +113,7 @@ function ShareUnavailableMessageBox( he, se, status, isPanel )
 				default:
 					break;
 				case 0:
-					TVShell.URL = "msntv:/Help/MSNTV_OFFLINE_TOC_main.htm";
+					TVShell.URL = "/Help/MSNTV_OFFLINE_TOC_main.htm";
 					if (isPanel) {
 						TVShell.PanelManager.Remove(window.name);
 					}

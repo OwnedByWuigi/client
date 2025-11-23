@@ -56,7 +56,7 @@ function cleanup()
 function gotoFavorites()
 {
 	cleanup();
-	thisPanel.GotoURL("msntv:/favorites/favorites.html");
+	thisPanel.GotoURL("/favorites/favorites.html");
 }
 
 
@@ -626,7 +626,8 @@ function respondToImport( httpRequest )
 	{
 		gImport = true;
 		gResponseReady = true;
-		updateProgressBar(40);
+		updateProgressBar(40);
+
 		updateStatusMessage("Upload favorites completed...");		
 	}
 	else
@@ -671,7 +672,7 @@ function IframeOnload()
 		// don't need this event any more
 		theFrame.detachEvent( "onload", IframeOnload);
 		
-		// load the blank page, to avoid the skydrive favorites page from refreshing.
+		// load the blan//id the skydrive favorites page from refreshing.
 		theFrame.src = "msntv:/msntv:/Shell/Empty.html";
 
 		// remember that migration has been performed.
@@ -752,7 +753,7 @@ document.write("<msntv:PanelHeading id=\"PanelHeader\" label=\"Favorites\" helpU
 			</td></tr>
 	</table>
 		</div>
-	</div>
+	</div>/
 	<iframe id="hiddenframe" style="display:none" src="msntv:/Shell/Empty.html"></iframe>
 	<script>
 	       setTimeout("init();",100);

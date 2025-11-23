@@ -37,8 +37,8 @@
 <PUBLIC:METHOD NAME="OnClick" />
 <PUBLIC:METHOD NAME="OnServiceListKeyDown" />
 
-<SCRIPT LANGUAGE="JScript" SRC="msntv:/Javascript/TVShell.js"></SCRIPT>
-<SCRIPT LANGUAGE="JScript" SRC="msntv:/Javascript/VKCodes.js"></SCRIPT>
+<SCRIPT LANGUAGE="JScript" SRC="/Javascript/TVShell.js"></SCRIPT>
+<SCRIPT LANGUAGE="JScript" SRC="/Javascript/VKCodes.js"></SCRIPT>
 <SCRIPT LANGUAGE="JScript">
 
 //+----------------------------------------------------------------------------
@@ -83,7 +83,7 @@ function Init()
 	_savedFocus = null;
 	this.style.visibility = "hidden";
 
-	var baseURL = "msntv:/Shared/images/";
+	var baseURL = "/Shared/images/";
 	var baseM = baseURL;
 	if (element.document.URL.indexOf("msntv:") != 0) {
 		// Server base url here.

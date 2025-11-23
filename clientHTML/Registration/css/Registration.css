@@ -1,4 +1,4 @@
-@import url(msntv:/Shared/CSS/Base.css);
+@import url(/Shared/CSS/Base.css);
 
 /* treatment of hyperlinks */
 A:link {text-decoration: none; color:#003471} 
@@ -11,7 +11,7 @@ body
 {
 	background-repeat: no-repeat;
 	margin: 0;
-	background-image: url(msntv:/Registration/images/bgimage.jpg);
+	background-image: url(/Registration/images/bgimage.jpg);
 	overflow: hidden;
 }
 

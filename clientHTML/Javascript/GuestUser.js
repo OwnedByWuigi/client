@@ -120,8 +120,8 @@ function AddGuestUser()
 	}
 
 	if (user) {
-		user.LargeIcon = "msntv:/tvshell/images/guest_transparent.png";
-		user.SmallIcon = "msntv:/tvshell/images/guest_small.gif";
+		user.LargeIcon = "/tvshell/images/guest_transparent.png";
+		user.SmallIcon = "/tvshell/images/guest_small.gif";
 	}
 }
 

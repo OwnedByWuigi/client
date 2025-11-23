@@ -60,7 +60,7 @@ a:active
 	left: 4px;
 	margin-left: 4px;
 	behavior: url(#default#alphaImageLoader);
-	src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+	src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	width: 20px;
 	height: 20px;
 }
@@ -94,14 +94,14 @@ a:active
 
 </style>
 
-<script src="msntv:/Javascript/TVShell.js"></script>
-<script id=rescourcescript src="msntv:/msntv_tvshell_loc.js"></script>
-<script src="msntv:/Javascript/ConnectionManager.js"></script>
-<script src="msntv:/Javascript/Provisioning.js"></script>
-<script src="msntv:/Javascript/VKCodes.js"></script>
-<script src="msntv:/Javascript/ServiceList.js"></script>
-<script src="msntv:/Javascript/GuestUser.js"></script>
-<script language="javascript" src="msntv:/Javascript/SignalStrength.js"></script>
+<script src="/Javascript/TVShell.js"></script>
+<script id=rescourcescript src="/msntv_tvshell_loc.js"></script>
+<script src="/Javascript/ConnectionManager.js"></script>
+<script src="/Javascript/Provisioning.js"></script>
+<script src="/Javascript/VKCodes.js"></script>
+<script src="/Javascript/ServiceList.js"></script>
+<script src="/Javascript/GuestUser.js"></script>
+<script language="javascript" src="/Javascript/SignalStrength.js"></script>
 
 <script>
 var UserManager = TVShell.UserManager;
@@ -611,25 +611,25 @@ Sink.AttachEvent(TVShell.UserManager, "OnUserAttributeModified", OnUserAttribute
 			<td width=24></td>
 			<td style="color:#E6E6E6;font-size:16px;"><script>document.write(L_HOMENETWORK_LINK)</script></td>
 			<td width=15></td>
-			<td width=42><a href="javascript:accessOfflineApp('msntv:/Photo/PhotoHome.html')"><div id="photo" style="padding:0px; height:42px; width:42px; behavior:url(#default#alphaImageLoader); src:images/Photo.png"></div></a></td><td width=5></td>
+			<td width=42><a href="javascript:accessOfflineApp('/Photo/PhotoHome.html')"><div id="photo" style="padding:0px; height:42px; width:42px; behavior:url(#default#alphaImageLoader); src:images/Photo.png"></div></a></td><td width=5></td>
 			<td class=homeMediaLink><script>document.write(L_PHOTOS_LINK)</script></td>
 			<script>				
 				if (UNDER_NT || TVShell.Property("MusicFeature")) {
 					document.write('\
 						<td width=30></td>\
-						<td width=42><a href="javascript:accessOfflineApp(\'msntv:/Music/MusicHome.html\')"><div id="music" style="padding:0px; height:42px; width:42px; behavior:url(#default#alphaImageLoader); src:images/Music.png"></div></a></td><td width=5></td>\
+						<td width=42><a href="javascript:accessOfflineApp(\'/Music/MusicHome.html\')"><div id="music" style="padding:0px; height:42px; width:42px; behavior:url(#default#alphaImageLoader); src:images/Music.png"></div></a></td><td width=5></td>\
 						<td class=homeMediaLink>'+L_MUSIC_LINK+'</td>');
 				}
 				if (UNDER_NT || TVShell.Property("VideoFeature")) {
 					document.write('\
 						<td width=30></td>\
-						<td width=42><a href="javascript:accessOfflineApp(\'msntv:/Video/VideoHome.html\')"><div id="video" style="padding:0px; height:42px; width:54px; behavior:url(#default#alphaImageLoader); src:images/IconSignInVideo.png"></div></a></td><td width=5></td>\
+						<td width=42><a href="javascript:accessOfflineApp(\'/Video/VideoHome.html\')"><div id="video" style="padding:0px; height:42px; width:54px; behavior:url(#default#alphaImageLoader); src:images/IconSignInVideo.png"></div></a></td><td width=5></td>\
 						<td class=homeMediaLink>'+L_VIDEOS_LINK+'</td>');
 				}
 				if (UNDER_NT || TVShell.Property("GameFeature")) {
 					document.write('\
 						<td width=30></td>\
-						<td width=42><a href="javascript:accessOfflineApp(\'msntv:/Game/GameHome.html\')"><div id="game" style="padding:0px; height:42px; width:54px; behavior:url(#default#alphaImageLoader); src:images/Game2.png"></div></a></td><td width=5></td>\
+						<td width=42><a href="javascript:accessOfflineApp(\'/Game/GameHome.html\')"><div id="game" style="padding:0px; height:42px; width:54px; behavior:url(#default#alphaImageLoader); src:images/Game2.png"></div></a></td><td width=5></td>\
 						<td class=homeMediaLink>'+L_GAMES_LINK+'</td>');
 				}
 			</script>
@@ -656,12 +656,12 @@ Sink.AttachEvent(TVShell.UserManager, "OnUserAttributeModified", OnUserAttribute
 			</a></td>
 			<script>
 				if (!InWholesaleGuestModes()) {
-					document.write("<td width=58 class=topLinks ><a href=msntv:/Settings/Settings.html id=settings> " +
+					document.write("<td width=58 class=topLinks ><a href=/Settings/Settings.html id=settings> " +
 						L_SETTINGS_LINK + "</a></td> \
-						<td width='70' class=topLinks ><A href=msntv:/Help/MSNTV_OFFLINE_TOC_main.htm id=help style='display:inline-block;position:relative;top:-1px;'> " +
+						<td width='70' class=topLinks ><A href=/Help/MSNTV_OFFLINE_TOC_main.htm id=help style='display:inline-block;position:relative;top:-1px;'> " +
 						L_HELP_LINK + "<SPAN id=helpIcon></SPAN></A></td>");
 				} else if (InWholesaleGuestMode()) {
-					document.write("<td width=58 class=topLinks ><a href=msntv:/Settings/ConnectionSettings.html id=settings> " +
+					document.write("<td width=58 class=topLinks ><a href=/Settings/ConnectionSettings.html id=settings> " +
 						L_SETTINGS_LINK + "</a></td>");
 				}
 			</script>

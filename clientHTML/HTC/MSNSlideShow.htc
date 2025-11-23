@@ -838,7 +838,7 @@
 					visiblity:inherit; \
 					height:20px; "
 
-				+ ((gViewInIE) ? "background-repeat:no-repeat;background-image:url(/Shared/Anduril/Images/en-us/_debugNxtBtn.jpg)" : "behavior:url(#default#alphaImageLoader);src:url(msntv:/Music/Images/NextBtn.png)") + "}"
+				+ ((gViewInIE) ? "background-repeat:no-repeat;background-image:url(/Shared/Anduril/Images/en-us/_debugNxtBtn.jpg)" : "behavior:url(#default#alphaImageLoader);src:url(/Music/Images/NextBtn.png)") + "}"
 				
 				+ "#vcPlyBtn \
 				{ \

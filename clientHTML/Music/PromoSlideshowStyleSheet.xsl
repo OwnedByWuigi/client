@@ -7,7 +7,7 @@
 <slides>
 <xsl:for-each select="items/itemgroup">
 	<xsl:if test="@type='feed'">
-		<div style="height:100%; overflow:hidden; background-image:url(msntv:/Music/Images/MusicQuickPlayMusicVideos.jpg); background-position:-15px -15px;" promoHeadingLabel="Music News">
+		<div style="height:100%; overflow:hidden; background-image:url(/Music/Images/MusicQuickPlayMusicVideos.jpg); background-position:-15px -15px;" promoHeadingLabel="Music News">
 			<div class="promoHeading">
 				Music News
 			</div>
@@ -20,7 +20,7 @@
 		</div>
 	</xsl:if>
 	<xsl:if test="@type='MSNVideo'">
-		<div style="height:100%; overflow:hidden; background-image:url(msntv:/Music/Images/MusicQuickPlayMusicVideos.jpg); background-position:-15px -15px;" promoHeadingLabel="Music Videos">
+		<div style="height:100%; overflow:hidden; background-image:url(/Music/Images/MusicQuickPlayMusicVideos.jpg); background-position:-15px -15px;" promoHeadingLabel="Music Videos">
 			<div class="promoHeading">
 				Music Videos
 			</div>

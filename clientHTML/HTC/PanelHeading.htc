@@ -56,7 +56,7 @@ function Init()
 					"<td id='" + uniqueID + "_help' style='font-size:18px; color: #14224B; display:none'>" +
 						"<a href=# onclick='" + uniqueID + ".ShowInMain(\"helpURL\");'>" +
 							"<div style='display:inline-block;'>" +
-								"Help<span style='display:inline; margin-left:4; width:20px; height:20px; line-height:20px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/images/Icon_Help_RelatedLink.png);'></span>" +
+								"Help<span style='display:inline; margin-left:4; width:20px; height:20px; line-height:20px; behavior:url(#default#alphaImageLoader); src:url(/Shared/images/Icon_Help_RelatedLink.png);'></span>" +
 							"</div>" +
 						"</a>" +
 					"</td>" +

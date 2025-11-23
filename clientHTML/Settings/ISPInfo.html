@@ -179,7 +179,7 @@ function NavigateBack()
 	} else if (parameters["onSuccess"]) {
 		ConnectionManagerSave();
 		TVShell.PanelManager.Item('main').NoBackToMe = true;
-		document.location = "msntv:/Settings/Settings.html";
+		document.location = "/Settings/Settings.html";
 	} else {
 		ConnectionManagerSave();
 		history.go(-1);
@@ -200,7 +200,7 @@ function submitChanges()
 	var parameters = FindParameters(TVShell.PanelManager);
 	TVShell.ConnectionManager.BYOASettings.SettingsVersion = 1;
 
-	TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
+	TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
 	NavigateBack();
 }
 </SCRIPT>

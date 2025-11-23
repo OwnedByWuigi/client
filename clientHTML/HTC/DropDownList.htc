@@ -41,7 +41,7 @@
 <PUBLIC:METHOD NAME="OnKeyDown" />
 <PUBLIC:METHOD NAME="OnClick" />
 
-<SCRIPT LANGUAGE="JScript" SRC="msntv:/Javascript/VKCodes.js"></SCRIPT>
+<SCRIPT LANGUAGE="JScript" SRC="/Javascript/VKCodes.js"></SCRIPT>
 <SCRIPT LANGUAGE="JScript">
 
 //+----------------------------------------------------------------------------
@@ -257,32 +257,32 @@ function BuildOpenTable()
 						"<tr>" +
 							"<td style=\"width:4px; height:26px; behavior:url(#default#alphaImageLoader); src:";
 		if (i == size - 1) {
-			html +=			  "url(msntv:/Shared/Images/DropDownCustomBottomLeftEdge.png);\">";
+			html +=			  "url(/Shared/Images/DropDownCustomBottomLeftEdge.png);\">";
 		}
 		else {
-			html +=			  "url(msntv:/Shared/Images/DropDownCustomMiddleLeftEdge.png);\">";
+			html +=			  "url(/Shared/Images/DropDownCustomMiddleLeftEdge.png);\">";
 		}
 		html +=				"</td><td style=\"behavior:url(#default#alphaImageLoader); src:";
 		if (i == size - 1) {
-			html +=			  "url(msntv:/Shared/Images/DropDownCustomBottomCenterStretch.png);\">";
+			html +=			  "url(/Shared/Images/DropDownCustomBottomCenterStretch.png);\">";
 		}
 		else {
-			html +=			  "url(msntv:/Shared/Images/DropDownCustomMiddleCenterStretch.png);\">";
+			html +=			  "url(/Shared/Images/DropDownCustomMiddleCenterStretch.png);\">";
 		}
 		html +=					"<span style=\"font-size:16px; color:#002157; margin-left:3px; " + 
 								 "overflow:hidden; text-overflow:ellipsis; white-space:nowrap;\"></span>" +
 							"</td><td style=\"width:20px; text-align:center; vertical-align:center; behavior:url(#default#alphaImageLoader); src:"; 
 		if (i == size - 1) {
-			html +=				"url(msntv:/Shared/Images/DropDownCustomBottomRightEdge.png);\">";
+			html +=				"url(/Shared/Images/DropDownCustomBottomRightEdge.png);\">";
 		}
 		else {
-			html +=				"url(msntv:/Shared/Images/DropDownCustomMiddleRightEdge.png);\">";
+			html +=				"url(/Shared/Images/DropDownCustomMiddleRightEdge.png);\">";
 		}
 		if (i == 0) {
-			html +=				"<div id=\"arrowUp\" style=\"width:18px; height:18px; line-height:18px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/images/ScrollIndicatorUpGlobal.png); visibility:hidden;\"></div>";
+			html +=				"<div id=\"arrowUp\" style=\"width:18px; height:18px; line-height:18px; behavior:url(#default#alphaImageLoader); src:url(/Shared/images/ScrollIndicatorUpGlobal.png); visibility:hidden;\"></div>";
 		}
 		else if (i == size - 1) {
-			html +=				"<div id=\"arrowDown\" style=\"width:18px; height:18px; line-height:18px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/images/ScrollIndicatorDownGlobal.png); visibility:hidden;\"></div>";
+			html +=				"<div id=\"arrowDown\" style=\"width:18px; height:18px; line-height:18px; behavior:url(#default#alphaImageLoader); src:url(/Shared/images/ScrollIndicatorDownGlobal.png); visibility:hidden;\"></div>";
 		}
 		html += 			"</td>" + 
 						"</tr>" +
@@ -343,14 +343,14 @@ function BuildButtonTable()
 		 				(_opened ? "" : "<a tabindex=0 onClick=\"" + uniqueID + ".OnClick(" + selectedIndex + ");\">") +
 							"<table cellspacing=0 cellpadding=0 style=\"width:100%;\">" +
 								"<tr>" +
-									"<td style=\"width:4px; height:26px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/CommandButtonGlobalLeftEdge.png);\">" +
+									"<td style=\"width:4px; height:26px; behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/CommandButtonGlobalLeftEdge.png);\">" +
 									"</td>" +
-									"<td  style=\"behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/CommandButtonGlobalMiddleStretch.png);\">" +
+									"<td  style=\"behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/CommandButtonGlobalMiddleStretch.png);\">" +
 										"<span style=\"width:" + (clientWidth - 27) + "px; font-size:16px; color:#002157; margin-left:2;" +
 										 "overflow:hidden; text-overflow:ellipsis; white-space:nowrap;\"></span>" +
 									"</td>" +
-									"<td style=\"width:20px; height:26px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/DropDownCustomTopRightEdge.png);\">" +
-										"<div id=\"arrow\" style=\"width:20px; height:26px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/DropDownCustom" + (openDirection == "up" ? "Up" : "Down") + "Arrow.png);\"> </div>" +
+									"<td style=\"width:20px; height:26px; behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/DropDownCustomTopRightEdge.png);\">" +
+										"<div id=\"arrow\" style=\"width:20px; height:26px; behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/DropDownCustom" + (openDirection == "up" ? "Up" : "Down") + "Arrow.png);\"> </div>" +
 									"</td>" +
 								"</tr>" +
 							"</table>" +

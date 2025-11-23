@@ -105,7 +105,7 @@ div.playlistLabel table
 	left: 0px;
 	height: 56px;
 	width: 100%;
-	background: url(msntv:/MediaNav/Assets/MediaNavHeader.jpg) no-repeat;
+	background: url(/MediaNav/Assets/MediaNavHeader.jpg) no-repeat;
 	
 }
 
@@ -116,7 +116,7 @@ div.playlistLabel table
 	left: 0px;
 	height: 56px;
 	width: 100%;
-	background: url( msntv:/Music/Images/MusicHeader.jpg ) no-repeat;
+	background: url( /Music/Images/MusicHeader.jpg ) no-repeat;
 }
 
 #headerPhoto
@@ -126,7 +126,7 @@ div.playlistLabel table
 	left: 0px;
 	height: 56px;
 	width: 100%;
-	background: url( msntv:/Photo/Assets/PhotoHeader.jpg ) no-repeat;
+	background: url( /Photo/Assets/PhotoHeader.jpg ) no-repeat;
 }
 
 #headerVideo
@@ -136,7 +136,7 @@ div.playlistLabel table
 	left: 0px;
 	height: 56px;
 	width: 100%;
-	background: url( msntv:/Video/Assets/VideoDMRHeader.jpg ) no-repeat;
+	background: url( /Video/Assets/VideoDMRHeader.jpg ) no-repeat;
 }
 
 
@@ -247,7 +247,7 @@ div.playlistLabel table
 #helpIcon
 {
 	behavior: url(#default#alphaImageLoader);
-	src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+	src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	width: 20px;
 	height: 20px;
 	margin-left: 4px;

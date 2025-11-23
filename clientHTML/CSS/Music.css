@@ -71,7 +71,7 @@ div.playlistLabel table
 }
 
 .promoQPCell {
-	background-image: url(msntv:/Music/Images/MusicQuickPlayMusicVideos.jpg);
+	background-image: url(/Music/Images/MusicQuickPlayMusicVideos.jpg);
 }
 
 .quickPlayCell {
@@ -94,7 +94,7 @@ div.playlistLabel table
 	text-align: right;
 	padding: 0px 15px 19px 25px;
 	width: 320px;
-	background-image: url(msntv:/Music/Images/MusicQuickPlayMusicVideos.jpg);
+	background-image: url(/Music/Images/MusicQuickPlayMusicVideos.jpg);
 	background-position: -240px -45px;
 }
 	
@@ -152,12 +152,12 @@ div.playlistLabel table
 
 .nowPlayingCell
 {
-	background-image: url(msntv:/Music/Images/MusicHPNowPlaying.jpg);
+	background-image: url(/Music/Images/MusicHPNowPlaying.jpg);
 }
 
 .toolbarCell 
 {
-	behavior: url(msntv:/htc/StretchyBackground.htc);
+	behavior: url(/htc/StretchyBackground.htc);
 }
 
 .controlButton {
@@ -268,7 +268,7 @@ div.playlistLabel table
 	left: 4px;
 	margin-left: 4px;
 	behavior: url(#default#alphaImageLoader);
-	src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+	src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	width: 20px;
 	height: 20px;
 }

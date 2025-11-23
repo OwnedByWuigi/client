@@ -101,16 +101,16 @@
 <!-- HTC Implementation  -->
 
 <script LANGUAGE=Javascript SRC="../Javascript/TVShell.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/VKCodes.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/ConnectionManager.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/DMRHome.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Photo/Photos.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/VKCodes.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/ConnectionManager.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/DMRHome.js"></script>
+<script LANGUAGE=Javascript SRC="/Photo/Photos.js"></script>
 <script language=javascript src="../Javascript/HomeNetworking.js"></script>
 
 <SCRIPT language="JavaScript" type="text/javascript">
 
 var WanType = GetWanConnectionType();
-var EMPTY_IMAGE = "msntv:/tvshell/images/empty.jpg";
+var EMPTY_IMAGE = "/tvshell/images/empty.jpg";
 var IMAGE_LOAD_TIMEOUT = (WanType == CONN_NB?60000:30000);//Updated when the imageLoadTimeout prop changes
 var autoMount = true;
 var SKIPTO_FILTER = "blendTrans(duration=0.01)";
@@ -272,10 +272,10 @@ function Init()
 ' > ' +
 '           <span id="_text" style="color:' + textColor + ';" ></span> ' +
 '			<img id="_img"  ' +
-'                src="msntv:/tvshell/images/empty.jpg" ' +
+'                src="/tvshell/images/empty.jpg" ' +
 '                style="margin: 0px;"/> ' +
 '			<img id="_imgLoader"  ' +
-'                src="msntv:/tvshell/images/empty.jpg" ' +
+'                src="/tvshell/images/empty.jpg" ' +
 '                style="margin: 0px;display: none;"/> ' +
 '		</td> ' +
 '	</tr>'+
@@ -1330,7 +1330,7 @@ function SetImgSrc( elem, img, nextImage, filterName )
 	if (filterObj)
 		filterObj.apply();
 
-	img.src = "msntv:/tvshell/images/empty.jpg";
+	img.src = "/tvshell/images/empty.jpg";
 	elem.style.width = viewWidth;
 	elem.style.height = viewHeight;
 

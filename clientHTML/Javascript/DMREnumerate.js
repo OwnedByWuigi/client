@@ -162,7 +162,7 @@ function getTruncationText()
 	var maxFiles = (DMRMaxResultCount == -1 ? "1,000" : DMRMaxResultCount);
 	if ( parameters.AttachmentViewer )
 	{
-		str = "<P>This folder displays the " + maxFiles + " photos that you’ve received most recently. To see older photos, please go to Mail.</P>";
+		str = "<P>This folder displays the " + maxFiles + " photos that youï¿½ve received most recently. To see older photos, please go to Mail.</P>";
 		return str;
 	}
 	else if (XMLFileURL)
@@ -806,17 +806,17 @@ function QueryMimeTypes( mimeTypes )
 // obtain URL of viewer with the current parameters intact
 function musicViewerURL()
 {
-	return replaceBaseURL( "msntv:/Music/Viewer.html" );
+	return replaceBaseURL( "/Music/Viewer.html" );
 }
 
 function photosViewerURL()
 {
-	return replaceBaseURL( "msntv:/Photo/Viewer.html" );
+	return replaceBaseURL( "/Photo/Viewer.html" );
 }
 
 function videoViewerURL()
 {
-	return replaceBaseURL( "msntv:/Video/Viewer.html" );
+	return replaceBaseURL( "/Video/Viewer.html" );
 }
 
 // replace the main panel url but leave the parameters intact 

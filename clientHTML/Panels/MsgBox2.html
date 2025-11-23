@@ -31,7 +31,7 @@ function SetContent()
 	if (icon.length > 0)
 		icon = TVShell.Utilities.EscapeHTML(icon);
 	else
-		icon = "msntv:/Panels/Images/Icon_Completed_ErrorPanels.gif";
+		icon = "/Panels/Images/Icon_Completed_ErrorPanels.gif";
 	animationImg.src = icon;
 	
 	setTimeout(ShowIcon, 100);
@@ -62,7 +62,7 @@ function IsMSNTVScalingEnabled() { return false; }
 </script>
 </head>
 <body>
-	<div id="animationIcon" style="visibility:hidden; position:absolute; left:15px; top:15px; margin:0; padding:0"><img id="animationImg" src="msntv:/Images/1x1.gif"></div>
+	<div id="animationIcon" style="visibility:hidden; position:absolute; left:15px; top:15px; margin:0; padding:0"><img id="animationImg" src="/Images/1x1.gif"></div>
 	<div id="message" class="scroller" style="position:absolute; top:25px; left:70px; width:210px; height:110px; padding-right:15px; word-wrap:break-word"></div>
 	<script>SetContent();</script>
 </body>

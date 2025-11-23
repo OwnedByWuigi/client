@@ -30,9 +30,9 @@ function Init()
 function GotoError(errorCode)
 {
 	if (errorCode == ConnectError_SlowConnectionRedial) {
-		document.location = "msntv:/Connecting/SlowNarrowbandConnection.html?FromConnectionHistory=true&BaudRate=" + Attempt.rxRate;
+		document.location = "/Connecting/SlowNarrowbandConnection.html?FromConnectionHistory=true&BaudRate=" + Attempt.rxRate;
 	} else {
-		document.location = "msntv:/Connecting/ConnectError.html?ErrorMode=WAN&ErrorCode=" + errorCode + "&FromHistory=true";
+		document.location = "/Connecting/ConnectError.html?ErrorMode=WAN&ErrorCode=" + errorCode + "&FromHistory=true";
 	}
 }
 

@@ -1,0 +1,3 @@
+# Make sure this is 127.0.0.1 so the files can load correctly (idk why i even added this config file lol)
+IP=127.0.0.1
+Port=80

@@ -181,7 +181,7 @@
 		{
 			if (CheckSelection("Move to Top", "song")) {
 				if (showConfirmation) {
-					PanelManager.AnimationMessageBox("Moving to top...", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
+					PanelManager.AnimationMessageBox("Moving to top...", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
 					setTimeout(DoMoveToTop, 2000);
 				}
 				else {
@@ -269,7 +269,7 @@
 		{
 			if (CheckSelection("Move to Bottom", "song")) {
 				if (showConfirmation) {
-					PanelManager.AnimationMessageBox("Moving to bottom...", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
+					PanelManager.AnimationMessageBox("Moving to bottom...", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
 					setTimeout(DoMoveToBottom, 2000);
 				}
 				else {
@@ -319,11 +319,11 @@
 	</script>
 </head>
 
-<body style="behavior: url(msntv:/HTC/ScrollDelegator.htc);" onunload="OnUnload();">
+<body style="behavior: url(/HTC/ScrollDelegator.htc);" onunload="OnUnload();">
 	<table style="height:100%; width:100%;" cellpadding="0" cellspacing="0">
 		<tr>
 			<td style="height:57px;">
-				<msntv:DMRHeading id="Heading" mainTitle="Music" subTitle="Edit Song List" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "msntv:/Settings/WMPVisualization.html" imageURL="msntv:/Music/Images/MusicHeader.jpg" />
+				<msntv:DMRHeading id="Heading" mainTitle="Music" subTitle="Edit Song List" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "/Settings/WMPVisualization.html" imageURL="/Music/Images/MusicHeader.jpg" />
 			</td>
 		<tr>
 			<td>

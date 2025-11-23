@@ -101,7 +101,7 @@ function submitChanges()
 			if (buttons[i].checked)
 			{
 				if (buttons[i].value == BYOAModemProviderName) {
-					document.location="msntv:/Settings/ISPInfo.html?SetConnectionType=true";
+					document.location="/Settings/ISPInfo.html?SetConnectionType=true";
 					return;
 				} else {
 					SetConnectionType(buttons[i].value);
@@ -112,7 +112,7 @@ function submitChanges()
 			}
 	}
 
-	TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
+	TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
 	NavigateBack();
 }
 </SCRIPT>

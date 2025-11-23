@@ -1,5 +1,5 @@
 <html xmlns:msntv>
-<?import namespace="msntv" implementation="msntv:/HTC/CustomButton.htc">
+<?import namespace="msntv" implementation="/HTC/CustomButton.htc">
 <head>
 <style>
 
@@ -15,7 +15,7 @@ body
 {
 	height: 50;
 	width: 560;
-	background-image: url(msntv:/Photo/Assets/PhotoHeader.jpg);
+	background-image: url(/Photo/Assets/PhotoHeader.jpg);
 }
 
 .opwTitle
@@ -42,18 +42,18 @@ body
 	position: absolute;
 	height: 45;
 	width: 560;
-	background-image: url(msntv:/Photo/Assets/PhotosNavBG.jpg);
+	background-image: url(/Photo/Assets/PhotosNavBG.jpg);
 	bottom: 0px;
 	text-align:right;
 }
 </style>
-<script language="javascript" src="msntv:/javascript/TVShell.js"></script>
-<script language="Javascript" src="msntv:/Javascript/PanelImpl.js"></script>
+<script language="javascript" src="/javascript/TVShell.js"></script>
+<script language="Javascript" src="/Javascript/PanelImpl.js"></script>
 <script language="javascript">
 
 var CASEINSENSITIVE = 0x00000008;
 var IGNOREFUNCNOTEXIST = true;
-var FINALPAGEURL = "msntv:/opw/opwfinalpage.html";
+var FINALPAGEURL = "/opw/opwfinalpage.html";
 var mainpanel=PanelManager.Item("main");
 var Sink = new ActiveXObject("MSNTV.MultipleEventSink");
 var g_uploaded = 0;
@@ -251,7 +251,7 @@ function OnOPWSetHeaderText(title, subtitle)
 function OnOPWFinalNext()
 {
 	if ( g_uploaded == 0 ){
-		provider.location.href = "msntv:/opw/opwupload.html";
+		provider.location.href = "/opw/opwupload.html";
 		g_uploaded = 1;
 	}
 	else{
@@ -265,7 +265,7 @@ function OnOPWFinalNext()
 function OnOPWFinalBack()
 {
 	// back was pressed before uploading files, show the provider list
-	provider.location.href = "msntv:/opw/opwcreatemanifest.html?nouploadtime=1";
+	provider.location.href = "/opw/opwcreatemanifest.html?nouploadtime=1";
 	g_uploaded = 0;
 }
 
@@ -306,7 +306,7 @@ function cleanup()
 	xml.async = false;
 
 	// reset the manifest
-	xml.load("msntv:/OPW/OPWManifestTemplate.xml");
+	xml.load("/OPW/OPWManifestTemplate.xml");
 }
 
 
@@ -319,7 +319,7 @@ Sink.AttachEvent(PanelManager, "OnOPWCancel", OnOPWCancel);
 
 </script>
 </head>
-<body onload="onload();" onUnload="cleanup();" style="behavior: url(msntv:/HTC/ScrollDelegator.htc);">
+<body onload="onload();" onUnload="cleanup();" style="behavior: url(/HTC/ScrollDelegator.htc);">
 <div id="headerArea" style="v-align:center">
 	<table cellspacing=0 cellpadding=0 width=100% height=100% style="padding-left:5px">
 	<tr height=100%>
@@ -329,7 +329,7 @@ Sink.AttachEvent(PanelManager, "OnOPWCancel", OnOPWCancel);
 	</tr></table>
 </div>
 <div>
-<iframe id="provider" name="provider" src="msntv:/opw/OPWCreateManifest.html" onload="providerOnLoad();" width="560" height="290" frameborder="0" scrolling="auto"></iframe>
+<iframe id="provider" name="provider" src="/opw/OPWCreateManifest.html" onload="providerOnLoad();" width="560" height="290" frameborder="0" scrolling="auto"></iframe>
 </div>
 <div id="footerArea">
 	<table width="100%">

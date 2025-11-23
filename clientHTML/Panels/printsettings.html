@@ -9,7 +9,7 @@
 	<script language="Javascript" src="../Javascript/PanelImpl.js"></script>
 	<script language="Javascript" SRC="../Javascript/Panels.js"></script>
 	<script language="Javascript" SRC="../Javascript/print.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 	<script language="Javascript" src="../Javascript/ProgressPanel.js"></script>
 	<script language="Javascript" src="../Javascript/ConnectionManager.js"></script>
 
@@ -99,7 +99,7 @@
 	{
 		var currentURL = mainpanel.URL;
 		currentURL = currentURL.toLowerCase();
-		var retVal = (currentURL.indexOf("msntv:/docviewer/docviewer.htm") == 0) ? true : false;
+		var retVal = (currentURL.indexOf("/docviewer/docviewer.htm") == 0) ? true : false;
 		return retVal;
 	}
 	
@@ -107,7 +107,7 @@
 	{
 		var currentURL = mainpanel.URL;
 		currentURL = currentURL.toLowerCase();
-		var retVal = (currentURL.indexOf("msntv:/photo/viewer.html") == 0) ? true : false;
+		var retVal = (currentURL.indexOf("/photo/viewer.html") == 0) ? true : false;
 		return retVal;
 	}
 	
@@ -349,7 +349,7 @@
 	function CreateHiddenPanelForPrint()
 	{
 		PanelManager.Remove("imageprinthost");
-		var imageprinthost = new Panel("imageprinthost", "msntv:/Photo/ImagePrintPanel.html", 
+		var imageprinthost = new Panel("imageprinthost", "/Photo/ImagePrintPanel.html", 
 			SYSTEM_PANEL_TYPE, STATIC_PANEL_STYLE,100,0,false);
 		imageprinthost.start = new FullRectangle(0, 0, 0, 0);
 		return AddPanel(PanelManager, imageprinthost);
@@ -673,18 +673,18 @@
 			if (IsInPhotoViewer() && photoPrintCapable) {
 				document.all.dropDown.RemoveItems();
 				document.all.dropDown.size = 4;
-				document.all.dropDown.AppendItem("Letter (8 1/2 × 11 in)");
-				document.all.dropDown.AppendItem("Legal (8 1/2 × 14 in)");
-				document.all.dropDown.AppendItem("A4 (210 × 297 mm)");
+				document.all.dropDown.AppendItem("Letter (8 1/2 ï¿½ 11 in)");
+				document.all.dropDown.AppendItem("Legal (8 1/2 ï¿½ 14 in)");
+				document.all.dropDown.AppendItem("A4 (210 ï¿½ 297 mm)");
 				document.all.dropDown.AppendItem(PHOTO_PRINT_ITEM);
 				papersize = PhotoPaperSize_4X6;
 				PrintManager.Quality = "High";
 			} else {
 				document.all.dropDown.RemoveItems();
 				document.all.dropDown.size = 3;
-				document.all.dropDown.AppendItem("Letter (8 1/2 × 11 in)");
-				document.all.dropDown.AppendItem("Legal (8 1/2 × 14 in)");
-				document.all.dropDown.AppendItem("A4 (210 × 297 mm)");
+				document.all.dropDown.AppendItem("Letter (8 1/2 ï¿½ 11 in)");
+				document.all.dropDown.AppendItem("Legal (8 1/2 ï¿½ 14 in)");
+				document.all.dropDown.AppendItem("A4 (210 ï¿½ 297 mm)");
 
 				if (PhotoPaperSize_4X6 == PrintManager.PaperSize) {
 					papersize = "Letter";
@@ -1293,9 +1293,9 @@
 								document.write("<msntv:dropDownList id='dropDown' size=3 style='width:210px;' onSelect='PaperSizeSelected()' />");
 							}
 							
-							document.all.dropDown.AppendItem("Letter (8 1/2 × 11 in)");
-							document.all.dropDown.AppendItem("Legal (8 1/2 × 14 in)");
-							document.all.dropDown.AppendItem("A4 (210 × 297 mm)");
+							document.all.dropDown.AppendItem("Letter (8 1/2 ï¿½ 11 in)");
+							document.all.dropDown.AppendItem("Legal (8 1/2 ï¿½ 14 in)");
+							document.all.dropDown.AppendItem("A4 (210 ï¿½ 297 mm)");
 
 							if (photoPrintCapable) {
 								document.all.dropDown.AppendItem(PHOTO_PRINT_ITEM);

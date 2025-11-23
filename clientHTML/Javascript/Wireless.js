@@ -574,7 +574,7 @@ WirelessConnectFailed(errorCode)
 		var size  = 1;	// 1 = small, 0 = large
 		WSDialog(msg,title,buttons,defBut,errMsg,true,iconType,size);
 	} else {
-		var anim = "msntv:/Images/WirelessConnectFailedAnim.gif";
+		var anim = "/Images/WirelessConnectFailedAnim.gif";
 		var msg = "Unable to connect to wireless network <em>" + ssid + "</em>. ";
 		if ( errorCode == ConnectError_NoDHCPResponse ) {
 			msg += "Could not get response from DHCP server.";

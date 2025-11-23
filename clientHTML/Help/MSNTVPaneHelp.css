@@ -3,7 +3,7 @@
 	In this file, override the ones that need to be different 
 
 */
-@import url(msntv:/Shared/CSS/Settings.css);
+@import url(/Shared/CSS/Settings.css);
 
 
 /* These styles override the ones in Settings.css 
@@ -81,7 +81,7 @@ table.textPlusGraphics
 	top:2px;
 	left:-15px;
 	padding-left:13px;
-	background:url(msntv:/Shared/images/BulletCustom.gif) no-repeat;
+	background:url(/Shared/images/BulletCustom.gif) no-repeat;
 	background-position-y:3px;
 }
 

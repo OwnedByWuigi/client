@@ -21,10 +21,10 @@
 	{
 		var mainPanel = TVShell.PanelManager.Item('main');
 		mainPanel.NoBackToMe = true;
-		mainPanel.ClearTravelLog("msntv:/Registration/pages/ConnectError.html");
-		mainPanel.ClearTravelLog("msntv:/Connecting/ConnectError.html");
+		mainPanel.ClearTravelLog("/Registration/pages/ConnectError.html");
+		mainPanel.ClearTravelLog("/Connecting/ConnectError.html");
 		if ( TVShell.ConnectionManager.WANCause == "FullUpdate" ) {
-			document.location = "msntv:/Update/FullUpdate.html";
+			document.location = "/Update/FullUpdate.html";
 		} else {
 			LoginToService();
 		}

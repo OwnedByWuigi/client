@@ -1,7 +1,7 @@
 <html xmlns:msntv>
-<?import namespace="msntv" implementation="msntv:/HTC/CustomButton.htc">
-<?IMPORT namespace="msntv" implementation="msntv:/HTC/SettingsHeading.htc">
-<LINK REL=StyleSheet TYPE="text/css" HREF="msntv:/CSS/Settings.css">
+<?import namespace="msntv" implementation="/HTC/CustomButton.htc">
+<?IMPORT namespace="msntv" implementation="/HTC/SettingsHeading.htc">
+<LINK REL=StyleSheet TYPE="text/css" HREF="/CSS/Settings.css">
 <HEAD>
 <TITLE>
 Service Selection
@@ -37,7 +37,7 @@ Service Selection
 			TVShell.ServiceList.Save();
 		}
 
-		document.location = 'msntv:/Registration/pages/Welcome.html'
+		document.location = '/Registration/pages/Welcome.html'
 	}
 
 	function SetAndSignOn()
@@ -46,7 +46,7 @@ Service Selection
 		login.URL = document.all.URL.value;
 
 		var home = TVShell.BuiltinServiceList.Add("SignOn");
-		home.URL = "msntv:/TVShell/login.html";
+		home.URL = "/TVShell/login.html";
 		home.KeyCode = VK_BROWSER_HOME;
 		home.Description = document.all.Name.value;
 
@@ -145,9 +145,9 @@ Service Selection
 <DIV id=sideBar>
 	<msntv:CustomButton style="display:inline-block" label="Register"     onclick="SetAndRegister();"/>		
 	<msntv:CustomButton style="display:inline-block" label="Go to SignOn" onclick="SetAndSignOn();"/>
-	<msntv:CustomButton style="display:inline-block" label="Settings"     onclick="document.location='msntv:/Settings/Settings.html'"/>
-	<msntv:CustomButton style="display:inline-block" label="Tricks"       onclick="document.location='msntv:/Test/Tricks.html'"/>
-	<msntv:CustomButton style="display:inline-block" label="Help"         onclick="document.location='msntv:/Help/Contents.html'"/>
+	<msntv:CustomButton style="display:inline-block" label="Settings"     onclick="document.location='/Settings/Settings.html'"/>
+	<msntv:CustomButton style="display:inline-block" label="Tricks"       onclick="document.location='/Test/Tricks.html'"/>
+	<msntv:CustomButton style="display:inline-block" label="Help"         onclick="document.location='/Help/Contents.html'"/>
 </DIV>
 
 <DIV id=scrollArea>

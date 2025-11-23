@@ -1,4 +1,4 @@
-<HTML xmlns:msntv> <?IMPORT namespace="msntv" implementation="msntv:/HTC/CustomButton.htc"> <?IMPORT namespace="msntv" implementation="msntv:/HTC/SettingsHeading.htc"> <TITLE>Broadband settings</TITLE> </HEAD><LINK REL=StyleSheet TYPE="text/css" HREF="../../CSS/Settings.css"> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/TVShell.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/ServiceList.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/parameters.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/ConnectionManager.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/SettingsTemplate.js"></SCRIPT><BODY onLoad="onLoadPage();"> <SCRIPT>OpenSettingsTable( "Settings" , "Broadband settings" , "" , true );</SCRIPT> <SCRIPT>
+<HTML xmlns:msntv> <?IMPORT namespace="msntv" implementation="/HTC/CustomButton.htc"> <?IMPORT namespace="msntv" implementation="/HTC/SettingsHeading.htc"> <TITLE>Broadband settings</TITLE> </HEAD><LINK REL=StyleSheet TYPE="text/css" HREF="../../CSS/Settings.css"> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/TVShell.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/ServiceList.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/parameters.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/ConnectionManager.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="../../Javascript/SettingsTemplate.js"></SCRIPT><BODY onLoad="onLoadPage();"> <SCRIPT>OpenSettingsTable( "Settings" , "Broadband settings" , "" , true );</SCRIPT> <SCRIPT>
 	var parameters = FindParameters(TVShell.PanelManager);
 	var pageText;
 
@@ -26,7 +26,7 @@
 	function SaveCompleted()
 	{
 		TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.",
-												 "msntv:/Panels/Images/TaskCompleted.gif",
+												 "/Panels/Images/TaskCompleted.gif",
 												 "Task_Complete", 2000);
 
 		NavigateBack();
@@ -60,9 +60,9 @@
 			var search = document.location.search;
 
 			if (search && search != "")
-				document.location.replace("msntv:/Settings/Network/IPAddress.html?"+search);
+				document.location.replace("/Settings/Network/IPAddress.html?"+search);
 			else
-				document.location.replace("msntv:/Settings/Network/IPAddress.html");
+				document.location.replace("/Settings/Network/IPAddress.html");
 		}
 	}
 

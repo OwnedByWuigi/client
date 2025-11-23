@@ -61,13 +61,13 @@ a:active
 </style>
 
 <script language="Javascript" src="../Javascript/TVShell.js"></script>
-<script id=rescourcescript src="msntv:/msntv_tvshell_loc.js"></script>
+<script id=rescourcescript src="/msntv_tvshell_loc.js"></script>
 <script language="Javascript" src="../Javascript/ServiceList.js"></script>
 <script language="Javascript" src="../Javascript/PanelImpl.js"></script>
 <script language="Javascript" src="../Javascript/Panels.js"></script>
-<script language="Javascript" src="msntv:/Javascript/SigninPanel.js"></script>
-<script language="Javascript" src="msntv:/Javascript/ConnectionManager.js"></script>
-<script language="Javascript" src="msntv:/Javascript/GuestUser.js"></script>
+<script language="Javascript" src="/Javascript/SigninPanel.js"></script>
+<script language="Javascript" src="/Javascript/ConnectionManager.js"></script>
+<script language="Javascript" src="/Javascript/GuestUser.js"></script>
 <script>
 
 var UserManager = TVShell.UserManager;
@@ -278,7 +278,7 @@ function switchToUser(userNum)
 function gotoForgotPassword()
 {
 	HideSigninPanel();
-	PanelManager.Item("main").GotoURL("msntv:/tvshell/ForgotPassword.html");
+	PanelManager.Item("main").GotoURL("/tvshell/ForgotPassword.html");
 	PanelManager.Item("main").SetTravelLogFlag("openpanel" , SIGNIN_PANEL_NAME);
 }
 
@@ -334,7 +334,7 @@ function clearInfo()
 function OnBeforeShow(name)
 {
 	if (name == SIGNIN_PANEL_NAME) {
-		document.body.style.backgroundImage = 'url(msntv:/panels/images/SignInPanelBg.jpg)';
+		document.body.style.backgroundImage = 'url(/panels/images/SignInPanelBg.jpg)';
 		forgot.style.visibility = "hidden";
 		if (UserManager.Count == 1 && IsRegistered()) {
 			UserManager.CurrentUser = 0;

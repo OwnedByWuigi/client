@@ -22,9 +22,9 @@
 
 <PUBLIC:COMPONENT tagname="CustomButton" lightweight=true>
 
-<PUBLIC:PROPERTY NAME="left" value="msntv:/Shared/Images/CommandButtonGlobalLeftEdge.png" /> 	<!-- equivalent to style.leftImage -->
-<PUBLIC:PROPERTY NAME="middle" value="msntv:/Shared/Images/CommandButtonGlobalMiddleStretch.png" /> 	<!-- equivalent to style.middleImage -->
-<PUBLIC:PROPERTY NAME="right" value="msntv:/Shared/Images/CommandButtonGlobalRightEdge.png" /> 	<!-- equivalent to style.rightImage -->
+<PUBLIC:PROPERTY NAME="left" value="/Shared/Images/CommandButtonGlobalLeftEdge.png" /> 	<!-- equivalent to style.leftImage -->
+<PUBLIC:PROPERTY NAME="middle" value="/Shared/Images/CommandButtonGlobalMiddleStretch.png" /> 	<!-- equivalent to style.middleImage -->
+<PUBLIC:PROPERTY NAME="right" value="/Shared/Images/CommandButtonGlobalRightEdge.png" /> 	<!-- equivalent to style.rightImage -->
 <PUBLIC:PROPERTY NAME="label" /> 
 <PUBLIC:PROPERTY NAME="hasFocus" />
 <PUBLIC:PROPERTY NAME="hideFocus" />
@@ -50,7 +50,7 @@
 <PUBLIC:DEFAULTS style="{color:#07214D; font-size: 16px; text-align:center; margin: 0 6px; padding: 0px 10px 0px 10px; cursor:hand;display:inline-block}" />
 
 
-<SCRIPT LANGUAGE="JScript" SRC="msntv:/Javascript/TVShell.js"></SCRIPT>
+//<SCRIPT LANGUAGE="JScript" SRC="/Javascript/TVShell.js"></SCRIPT>
 <SCRIPT LANGUAGE="jscript">
 
 //+----------------------------------------------------------------------------

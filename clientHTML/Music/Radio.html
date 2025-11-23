@@ -1,12 +1,12 @@
 <html >
 <head>
 <title>Radio</title>
-<link rel=StyleSheet type="text/css" href="msntv:/css/Base.css">	
-<link rel=StyleSheet type="text/css" href="msntv:/css/Music.css">
-<script language="Javascript" src="msntv:/Javascript/TVShell.js"></script>
-<SCRIPT language="Javascript" src="msntv:/Javascript/GuestUser.js"></SCRIPT>
-<script language="Javascript" src="msntv:/Javascript/ContentPaneHelp.js"></script>
-<script language="Javascript" src="msntv:/Javascript/Favorites.js"></script>
+<link rel=StyleSheet type="text/css" href="/css/Base.css">	
+<link rel=StyleSheet type="text/css" href="/css/Music.css">
+<script language="Javascript" src="/Javascript/TVShell.js"></script>
+<SCRIPT language="Javascript" src="/Javascript/GuestUser.js"></SCRIPT>
+<script language="Javascript" src="/Javascript/ContentPaneHelp.js"></script>
+<script language="Javascript" src="/Javascript/Favorites.js"></script>
 <style>
 .greenBullet
 {
@@ -223,7 +223,7 @@ function resyncFavorites()
 	var favURL = favPanel.URL.toLowerCase();
 
 	if ( favURL.indexOf("favorites.html") > 0 && favPanel.state == PanelState_Hidden )
-		favPanel.GotoURL("msntv:/Favorites/FavoritesSync.html?timeout=100");
+		favPanel.GotoURL("/Favorites/FavoritesSync.html?timeout=100");
 }
 
 
@@ -391,7 +391,7 @@ function removeRadioFavorite( elemID)
 
 	if ( hr == 0 ){		
 		var str = stationObj.innerText + " has been deleted from your favorites.";
-		TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+		TVShell.PanelManager.AnimationMessageBox(str, "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 		setTimeout("showFavoritesStation();",110);
 		if ( g_updateFavoritesPanelTimeout != 0 )
 			clearTimeout( g_updateFavoritesPanelTimeout );
@@ -428,7 +428,7 @@ function addRadioFavorite(elemID)
 
 	if ( favNodeId != null ){
 		var str = stationObj.innerText + " has been added to your favorites.";
-		TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Favorites/img/FavSave.gif", "Task_Complete", animationTimeOut);
+		TVShell.PanelManager.AnimationMessageBox(str, "/Favorites/img/FavSave.gif", "Task_Complete", animationTimeOut);
 		setTimeout("showFavoritesStation();",110);
 		if ( g_updateFavoritesPanelTimeout != 0 )
 			clearTimeout( g_updateFavoritesPanelTimeout );
@@ -532,7 +532,7 @@ function showFavoritesStation()
 
 function gotoFavorites(folderID)
 {
-	var favURL = "msntv:/favorites/favorites.html?folder=" + folderID;
+	var favURL = "/favorites/favorites.html?folder=" + folderID;
 	PanelManager.Item('favoritespanel').GotoURL(favURL);
 	PanelManager.Show('favoritespanel');
 }
@@ -626,10 +626,10 @@ Sink.AttachEvent(g_favoritesMgr,	"OnFavoritesChanged",	OnFavoritesChanged);
 
 </script>
 </head>
-<body class=stretchyBackground stretchyBackground="msntv:/Music/images/MusicRadioBG.jpg" onload="onload();">
+<body class=stretchyBackground stretchyBackground="/Music/images/MusicRadioBG.jpg" onload="onload();">
 <div id="header" style="display:block;">
 	<table cellspacing=0 cellpadding=0 width=100%>
-		<tr><td><IMG src="msntv:/Music/Images/MusicHeader.jpg" width=100% height=56 align=top></td></tr>
+		<tr><td><IMG src="/Music/Images/MusicHeader.jpg" width=100% height=56 align=top></td></tr>
 	</table>
 	<DIV id=headerTitle style="color: #001B4D;">Music</DIV>
 	<DIV id=headerSubTitle class=ellipsis>Radio</DIV>

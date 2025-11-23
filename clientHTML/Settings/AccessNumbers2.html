@@ -9,7 +9,7 @@
 	<SCRIPT LANGUAGE=Javascript SRC="../Javascript/SettingsTemplate.js"></SCRIPT>
 	<SCRIPT language="Javascript" src="../Javascript/ServiceList.js"></SCRIPT>
 	<SCRIPT LANGUAGE=Javascript SRC="../../Javascript/parameters.js"></SCRIPT>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 	<SCRIPT language="Javascript" src="../Javascript/ProgressPanel.js"></SCRIPT>
 
 	<LINK REL=StyleSheet TYPE="text/css" HREF="../CSS/Settings.css">
@@ -286,7 +286,7 @@ function submitChanges()
 	if (!saveSettings())
 		return false;
 
-	TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
+	TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);
 	NavigateBack();
 
 	return true;

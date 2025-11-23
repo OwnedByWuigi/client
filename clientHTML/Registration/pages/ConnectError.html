@@ -1,4 +1,4 @@
-<HTML xmlns:msntv> <?import namespace="msntv" implementation="msntv:/HTC/CustomButton.htc"><HEAD> <meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5"> <title id="title">Unable to Connect</title><link rel=stylesheet type="text/css" href="../css/Registration.css"> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/TVShell.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/ConnectionManager.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/ConnectionErrors.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/parameters.js"></SCRIPT> <SCRIPT>
+<HTML xmlns:msntv> <?import namespace="msntv" implementation="/HTC/CustomButton.htc"><HEAD> <meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5"> <title id="title">Unable to Connect</title><link rel=stylesheet type="text/css" href="../css/Registration.css"> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/TVShell.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/ConnectionManager.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/ConnectionErrors.js"></SCRIPT> <SCRIPT LANGUAGE=Javascript SRC="/Javascript/parameters.js"></SCRIPT> <SCRIPT>
 
 			var defaultFocusSettings = false;
 			
@@ -16,15 +16,15 @@
 			function GotoSettings()
 			{
 				if ( IsWirelessError() ) {
-					var conPage = escape("msntv:/Registration/Pages/ConnectedWireless.html");
-					document.location = "msntv:/Settings/Network/Wireless.html?onSuccess="+conPage;
+					var conPage = escape("/Registration/Pages/ConnectedWireless.html");
+					document.location = "/Settings/Network/Wireless.html?onSuccess="+conPage;
 				} else if (!UsingBroadband && ConnectError_LineInUse == ErrorCode ||
 						!UsingBroadband && ConnectError_NoDialTone == ErrorCode) {
-					document.location = "msntv:/Settings/BasicDialing.html#DONT_WAIT?focus=dontWait";
+					document.location = "/Settings/BasicDialing.html#DONT_WAIT?focus=dontWait";
 				} else if (!UsingBroadband) {
-					document.location = "msntv:/Settings/AdvancedDialingIndex.html?confirm=true";
+					document.location = "/Settings/AdvancedDialingIndex.html?confirm=true";
 				} else {
-					document.location = "msntv:/Settings/ConnectionSettings.html?confirm=true";
+					document.location = "/Settings/ConnectionSettings.html?confirm=true";
 				}
 			}
 
@@ -49,12 +49,12 @@
 
 			function GotoSensitivity()
 			{
-				document.location="msntv:/Settings/CallWaitingExtra.html";
+				document.location="/Settings/CallWaitingExtra.html";
 			}
 
 			function GotoOffHook()
 			{
-				document.location="msntv:/Settings/OffHook.html";
+				document.location="/Settings/OffHook.html";
 			}
 		</SCRIPT> <STYLE> .arrow { width:8px; height:11px; border:0; vertical-align:middle; } #errorDIV { position: absolute; left: 20px; bottom: 48px; font-size: 16px; visibility: hidden; } #buttonBar msntv\:CustomButton { margin-left:15px; margin-right:0px; } </STYLE> </HEAD><BODY onkeydown="KeyDown()"><DIV id=title> <SCRIPT>
 				document.write(FriendlyErrorTitle());

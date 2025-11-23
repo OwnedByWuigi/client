@@ -11,9 +11,9 @@
 	<script language="javascript" src="../Javascript/ServiceList.js"></script>
 	<script language="javascript" src="../Javascript/VKCodes.js"></script>
 	<script language="Javascript" src="../Javascript/Parameters.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 	<script language="Javascript" src="../Javascript/ProgressPanel.js"></script>
-	<script language="javascript" src="msntv:/Javascript/HomeNetworking.js"></script>
+	<script language="javascript" src="/Javascript/HomeNetworking.js"></script>
 	<script language="javascript" src="../Javascript/DMRHome.js"></script>
 	<script language="javascript" src="../Javascript/DMRCommon.js"></script>
 	<script language="javascript" src="../Javascript/DMRNavigate.js"></script>
@@ -27,7 +27,7 @@
 		ShowProgressPanel();
 
 		var Sink = new ActiveXObject("MSNTV.MultipleEventSink");
-		var homeURL = "msntv:/Video/VideoHome.html";
+		var homeURL = "/Video/VideoHome.html";
 		var homeMediaType = "video";
 		var itemsText = "videos";
 
@@ -43,11 +43,11 @@
 	</script>
 </head>
 
-<body style="behavior: url(msntv:/HTC/ScrollDelegator.htc);">
+<body style="behavior: url(/HTC/ScrollDelegator.htc);">
 	<table style="height:100%; width:100%;" cellpadding="0" cellspacing="0">
 		<tr>
 			<td style="height:57px;">
-				<msntv:DMRHeading id="Heading" mainTitle="Videos" subTitle="" helpTopicURL="MSNTV_TRS_TOC_Videos" imageURL="msntv:/Video/Assets/VideoDMRHeader.jpg"  />
+				<msntv:DMRHeading id="Heading" mainTitle="Videos" subTitle="" helpTopicURL="MSNTV_TRS_TOC_Videos" imageURL="/Video/Assets/VideoDMRHeader.jpg"  />
 			</td>
 		<tr>
 			<td>

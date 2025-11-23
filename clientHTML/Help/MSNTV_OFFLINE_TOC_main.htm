@@ -3,10 +3,10 @@
 	<title>Main help table of contents</title>
 	<?IMPORT namespace="msntv" implementation="../HTC/CustomButton.htc">
 	<?IMPORT namespace="msntv" implementation="MSNTVPaneHelpHeading.htc">
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/TVShell.js"></SCRIPT>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/Javascript/ConnectionManager.js"></SCRIPT>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_help_loc.js"></SCRIPT>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_common_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/Javascript/TVShell.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/Javascript/ConnectionManager.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_help_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_common_loc.js"></SCRIPT>
 	<link REL=StyleSheet TYPE="text/css" HREF="MSNTVPaneHelp.css">
 </head>
 
@@ -29,7 +29,7 @@ document.write("<msntv:MSNTVPaneHelpHeading label='" + L_HELP_LABEL +"' label2='
 <SCRIPT>
 	if (TVShell.ConnectionManager.WANProvider == MSNIAModemProviderName) {
 		document.write("\
-			<a id=\"connectSettingsID\" class=\"topicLink\" href=\"msntv:/Connecting/SlowNarrowbandConnection.html?FromHelp=true\">\
+			<a id=\"connectSettingsID\" class=\"topicLink\" href=\"/Connecting/SlowNarrowbandConnection.html?FromHelp=true\">\
 			Improving slow dial-up connections</a><br>\
 		");
 	}
@@ -61,7 +61,7 @@ document.write("<msntv:MSNTVPaneHelpHeading label='" + L_HELP_LABEL +"' label2='
 	<a id="autoUpdateID" class="topicLink" href="MSNTV_PROC_SINGLE_Offline_MessageLight.htm"><script>document.write(L_HELP_MORE_ITEM1);</script></a><br>
 	<a id="autoUpdateID" class="topicLink" href="MSNTV_PROC_SINGLE_Offline_AutoUpdate.htm"><script>document.write(L_HELP_MORE_ITEM2);</script></a><br>
 	<a id="custServiceID" class="topicLink" href="MSNTV_PROC_SINGLE_Offline_CustService.htm"><script>document.write(L_HELP_MORE_ITEM3);</script></a><br>
-	<a id="custServiceID" class="topicLink" href="msntv:/Settings/System/System.html"><script>document.write(L_HELP_MORE_ITEM4);</script></a>
+	<a id="custServiceID" class="topicLink" href="/Settings/System/System.html"><script>document.write(L_HELP_MORE_ITEM4);</script></a>
     <P> </P>
 
 </div>

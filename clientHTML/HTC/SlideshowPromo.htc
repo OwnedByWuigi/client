@@ -87,11 +87,11 @@
 <!-- HTC Implementation  -->
 <!-- You must include these scripts when using SlideshowPromo.htc
 <script LANGUAGE=Javascript SRC="../Javascript/TVShell.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/VKCodes.js"></script>
-<script language="javascript" src="msntv:/Javascript/DMRHome.js"></script>
-<script language="Javascript" src="msntv:/Javascript/DMRCommon.js"></script>
-<script language="Javascript" src="msntv:/Javascript/DMREnumerate.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Photo/Photos.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/VKCodes.js"></script>
+<script language="javascript" src="/Javascript/DMRHome.js"></script>
+<script language="Javascript" src="/Javascript/DMRCommon.js"></script>
+<script language="Javascript" src="/Javascript/DMREnumerate.js"></script>
+<script LANGUAGE=Javascript SRC="/Photo/Photos.js"></script>
 -->
 <SCRIPT language="JavaScript" type="text/javascript">
 

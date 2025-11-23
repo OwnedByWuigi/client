@@ -126,7 +126,7 @@
 				if ( tmp == 2 ) return;
 				if ( tmp == 0 )
 				{
-					document.location =  "msntv:/Settings/AccessNumbers2.html";
+					document.location =  "/Settings/AccessNumbers2.html";
 					return;
 				}
 			}
@@ -204,7 +204,7 @@
 					
 		TaskScheduler.Save();
 
-        TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000)
+        TVShell.PanelManager.AnimationMessageBox("Your changes have been saved.", "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000)
 		history.back();
 		  
 	}
@@ -214,7 +214,7 @@
 <LINK REL=StyleSheet TYPE="text/css" HREF="../CSS/Settings.css">
 <script>
 if(service=="true")
-   document.write("<LINK REL=StyleSheet TYPE='text/css' HREF='msntv:/Shared/CSS/SynchMan.css'>");
+   document.write("<LINK REL=StyleSheet TYPE='text/css' HREF='/Shared/CSS/SynchMan.css'>");
 </script>
 
 </HEAD>
@@ -315,7 +315,7 @@ function onLoadPage()
 <DIV id=scrollArea>
 		<table cellpadding=0 cellspacing=0 style="font-family:Segoe;font-size:18px">
 		<tr style="padding-bottom:15px"><td>
-			While you’re signed out, your Player can check for new e-mail messages and MSN TV updates.
+			While youï¿½re signed out, your Player can check for new e-mail messages and MSN TV updates.
 		</td></tr>
 		<tr style="padding-bottom:10px">
 		  <td><INPUT type=checkbox id=autoConnectForEmail onClick="updateTime.disabled=(!this.checked&&!autoConnectForUpdate.checked);NextEmailCheckIn.disabled=!this.checked;">

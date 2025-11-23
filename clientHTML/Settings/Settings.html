@@ -6,8 +6,8 @@
 <SCRIPT LANGUAGE=Javascript SRC="../Javascript/ServiceList.js"></SCRIPT>
 <SCRIPT LANGUAGE=Javascript SRC="../Javascript/ConnectionManager.js"></SCRIPT>
 <SCRIPT LANGUAGE=Javascript SRC="../Javascript/SettingsTemplate.js"></SCRIPT>
-<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_settings_loc.js"></SCRIPT>
-<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_common_loc.js"></SCRIPT>
+<SCRIPT LANGUAGE=Javascript SRC="/msntv_settings_loc.js"></SCRIPT>
+<SCRIPT LANGUAGE=Javascript SRC="/msntv_common_loc.js"></SCRIPT>
 
 <LINK REL=StyleSheet TYPE="text/css" HREF="../CSS/Settings.css">
 </HEAD>
@@ -24,9 +24,9 @@ if (!WANProvider) {
 function TestLAN()
 {
 	if (BYOAEthernetProviderName == WANProvider) {
-		return GotoLANPage("msntv:/Settings/Network/HomeNetworking.html");
+		return GotoLANPage("/Settings/Network/HomeNetworking.html");
 	} else {
-		document.location = "msntv:/Settings/ConnectionSettings.html?LANSetup=1";
+		document.location = "/Settings/ConnectionSettings.html?LANSetup=1";
 	}
 }
 </SCRIPT>

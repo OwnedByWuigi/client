@@ -326,11 +326,11 @@ function callCreateFavorite(index)//0: add to root; 1: add to a folder; -1: add 
 	var numOfAvailableFavorites=MaxNumOfFavorites-TVShell.UserManager.CurrentUser.FavoritesCount;
 	if (numOfAvailableFavorites < 10) {
 		if (numOfAvailableFavorites <= 0) {
-			TVShell.PanelManager.CustomMessageBox("Sorry, you don’t have room for any more favorites. Please remove <b>"+(Math.abs(numOfAvailableFavorites)+1) + "</b> or more of your favorites and try again.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
+			TVShell.PanelManager.CustomMessageBox("Sorry, you donï¿½t have room for any more favorites. Please remove <b>"+(Math.abs(numOfAvailableFavorites)+1) + "</b> or more of your favorites and try again.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
 			return null;
 		} else {
 			if (numOfAvailableFavorites == 1)
-				TVShell.PanelManager.CustomMessageBox("After we add this favorite, your list will be full. To add more, remove some of the favorites you don’t use.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
+				TVShell.PanelManager.CustomMessageBox("After we add this favorite, your list will be full. To add more, remove some of the favorites you donï¿½t use.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
 			else if (numOfAvailableFavorites == 2)	/* 2 because we're just about to add one */
 				TVShell.PanelManager.CustomMessageBox("You have room for one more favorite.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
 			else
@@ -389,7 +389,7 @@ function callCreateFolder()
 {
 	var numOfAvailableFavorites=MaxNumOfFavorites-TVShell.UserManager.CurrentUser.FavoritesCount;
 	if (numOfAvailableFavorites <= 0) {
-		TVShell.PanelManager.CustomMessageBox("Sorry, you don’t have room for any more folders. Please remove <b>"+(Math.abs(numOfAvailableFavorites)+1) + "</b> or more of your folders or favorites and try again.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
+		TVShell.PanelManager.CustomMessageBox("Sorry, you donï¿½t have room for any more folders. Please remove <b>"+(Math.abs(numOfAvailableFavorites)+1) + "</b> or more of your folders or favorites and try again.","", "OK", 0,"",false, MGX_ICON_WARNING, MGX_SIZE_SMALL);
 		return null;
 	}
 	
@@ -800,7 +800,7 @@ function handleAction(sVerb)
 					if ( !validURL )
 						badURL = true;
 					else{
-						if (! isMsnTVURL(currURL) )  // cannot enter msntv:/
+						if (! isMsnTVURL(currURL) )  // cannot enter /
 							badURL = true;
 					}       
 				}
@@ -831,7 +831,7 @@ function handleAction(sVerb)
 			if (callCreateFavorite(index) != null) {
 				var str="Favorite has been successfully saved.";
 				setTimeout("PanelManager.Hide(window.name);",animationTimeOut);
-				TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Favorites/img/FavSave.gif", "Task_Complete", animationTimeOut);
+				TVShell.PanelManager.AnimationMessageBox(str, "/Favorites/img/FavSave.gif", "Task_Complete", animationTimeOut);
 				b_ActionDone = true;
 				if ( TVShell.UserManager.CurrentUser.FavoritesCount > MAX_RECENT_THUMBNAILS )
 					g_favoritesMgr.saveMostRecentThumbNails(MAX_RECENT_THUMBNAILS);
@@ -863,7 +863,7 @@ function handleAction(sVerb)
 				setTimeout("handleAction('organizeFavorites');",1000);
 				if ( rc == 0) {
 					var str = "Deleted.";
-					TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+					TVShell.PanelManager.AnimationMessageBox(str, "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 				}
 			}
 			break;
@@ -887,7 +887,7 @@ function handleAction(sVerb)
 				else
 					str +=" a favorite";
 				str+=" to <b>" + targetFolderName +"</b> folder";
-				TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Favorites/img/FavMove.gif", "Task_Complete", animationTimeOut);
+				TVShell.PanelManager.AnimationMessageBox(str, "/Favorites/img/FavMove.gif", "Task_Complete", animationTimeOut);
 			}
 			break;
 
@@ -1236,7 +1236,7 @@ function createFolderExit()
 {	
 	if (callCreateFolder() != null) {
 		var str="You have successfully added the folder <b>" + AddedFolderName + "</b>.";
-		TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+		TVShell.PanelManager.AnimationMessageBox(str, "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 		setTimeout("handleAction('organizeFavorites');",100);
 		return 1;
 	}
@@ -1693,7 +1693,7 @@ function SaveEdit()
 	var hr = RenameFavorite(editNode, newTitle, currURL)
 	
 	if ( hr == 0 ){
-		TVShell.PanelManager.AnimationMessageBox("Saving changes...", "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+		TVShell.PanelManager.AnimationMessageBox("Saving changes...", "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 		setTimeout("handleAction('organizeFavorites');",1000);
 	}
 		
@@ -1843,7 +1843,7 @@ function moveToFolderExit()
 			else
 				str +=" a favorite";
 			str+=" to <b>" + targetFolderName +"</b> folder";
-			TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Favorites/img/FavMove.gif", "Task_Complete", animationTimeOut);
+			TVShell.PanelManager.AnimationMessageBox(str, "/Favorites/img/FavMove.gif", "Task_Complete", animationTimeOut);
 		}
 	}
 }
@@ -2186,7 +2186,7 @@ function DrawShowFavorites()
 
 function gotoSync()
 {
-	thisPanel.GotoURL("msntv:/Favorites/FavoritesSync.html?timeout=100");
+	thisPanel.GotoURL("/Favorites/FavoritesSync.html?timeout=100");
 }
 
 function favGoBack()
@@ -2374,7 +2374,7 @@ function CheckFullKeyDownCount()
 			href = favoriteNode.selectSingleNode("href").text;
 			if (href == GetTargetPanelURL()) {
 				var str ="<b>Fav # " + shortcutKeyNum + "</b> shortcut has been set.";
-				TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+				TVShell.PanelManager.AnimationMessageBox(str, "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 			} else {
 				ReassignShortcut(favoriteNode);
 			}
@@ -2406,7 +2406,7 @@ function AssignNewShortcut()
 			if (favNode)
 				g_favoritesMgr.newShortcut(favNode,shortcutValue);
 			str ="<b>Fav # " + shortcutKeyNum + "</b> shortcut has been set.";
-			TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+			TVShell.PanelManager.AnimationMessageBox(str, "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 			SaveFavorites();
 			if ( theNode == null )
 				setTimeout("handleAction('showRootFavorites');",100);
@@ -2438,7 +2438,7 @@ function ReassignShortcut(favoriteNode)
 			var favNode = g_oFavXml.selectSingleNode("//(favorite)[@id = '" + escapeString(favID) + "']");
 			g_favoritesMgr.newShortcut(favNode , shortcutValue);
 			str ="<b>Fav # " + shortcutKeyNum + "</b> shortcut has been set.";
-			TVShell.PanelManager.AnimationMessageBox(str, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
+			TVShell.PanelManager.AnimationMessageBox(str, "/Panels/Images/TaskCompleted.gif", "Task_Complete", animationTimeOut);
 			SaveFavorites();
 			if ( theNode == null )
 				setTimeout("handleAction('showRootFavorites');",100);

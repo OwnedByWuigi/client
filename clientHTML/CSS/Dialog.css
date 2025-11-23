@@ -1,4 +1,4 @@
-@import url(msntv:/Shared/CSS/Base.css);
+@import url(/Shared/CSS/Base.css);
 
 body {
 	background-image: none;
@@ -43,7 +43,7 @@ a:hover {
 
 body.fullPage
 {
-	background: url(msntv:/Panels/Images/ErrorDialogHeaderBG.jpg) no-repeat;
+	background: url(/Panels/Images/ErrorDialogHeaderBG.jpg) no-repeat;
 	behavior:none;
 	background-color: #7DBAF7;
 	margin:0;
@@ -60,7 +60,7 @@ body.fullPage
 	width:45px;
 	height:55px;
 	behavior:url(#default#alphaImageLoader);
-	src:url(msntv:/Panels/images/Icon_Warning_ErrorPanels.png);
+	src:url(/Panels/images/Icon_Warning_ErrorPanels.png);
 }
 
 #title

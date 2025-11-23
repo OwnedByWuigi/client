@@ -47,7 +47,7 @@ function NotProvisionedMessageBox(contentType, mediaType)
 	var UserManager = TVShell.UserManager;
 
 	var playMsg = "access media";
-	if ( contentType.substr(0,7) == "msntv:/" ) {
+	if ( contentType.substr(0,7) == "/" ) {
 		contentType = contentType.substr(7,20);
 		contentType = contentType.substr(0,contentType.indexOf('/'));
 	}		
@@ -67,7 +67,7 @@ function NotProvisionedMessageBox(contentType, mediaType)
 	}
 	var currentURL = mainPanel.URL;	
 	var msg = "Please sign in so we can verify your account status. <p><p>Once you've signed in, you can either stay online and explore, or sign out and " + playMsg;
-	var alreadyOnSigninPage = (currentURL == "msntv:/TVShell/login.html");
+	var alreadyOnSigninPage = (currentURL == "/TVShell/login.html");
 	var havePassword = (UserManager.CurrentUser && UserManager.CurrentUser.SavePassword);
 	var ret = 0;
 	if ( alreadyOnSigninPage && !havePassword ) 

@@ -1,4 +1,4 @@
-@import url(msntv:/Shared/CSS/Base.css);
+@import url(/Shared/CSS/Base.css);
 
 body
 {
@@ -26,7 +26,7 @@ a:link
 #header
 {
 	position: absolute;
-	background: url(msntv:/Settings/Images/SettingsHeaderBG.jpg) no-repeat;
+	background: url(/Settings/Images/SettingsHeaderBG.jpg) no-repeat;
 	background-color: #1C5798;
 	top: 0px;
 	left: 0px;
@@ -87,7 +87,7 @@ a:link
 	left: 4px;
 	margin-left: 4px;
 	behavior: url(#default#alphaImageLoader);
-	src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+	src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	width: 20px;
 	height: 20px;
 }
@@ -149,7 +149,7 @@ a:link
 	padding-left: 15px;
 	padding-right: 22px;
 	overflow-y: hidden;
-	behavior: url(msntv:/HTC/ScrollingDIV.htc);
+	behavior: url(/HTC/ScrollingDIV.htc);
 }
 
 #gradient

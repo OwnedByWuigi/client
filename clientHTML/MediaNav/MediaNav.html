@@ -8,9 +8,9 @@
 
 	<script language="Javascript" src="../Javascript/TVShell.js"></script>
 	<script language="Javascript" src="../Javascript/parameters.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 	<script language="Javascript" src="../Javascript/ProgressPanel.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/SigninPanel.js"></script>
+	<script language="Javascript" src="/Javascript/SigninPanel.js"></script>
 	<script language="javascript" src="../Javascript/ServiceList.js"></script>
 	<script language="javascript" src="../Javascript/HomeNetworking.js"></script>
 	<script language="javascript" src="../Javascript/DMRCommon.js"></script>
@@ -18,7 +18,7 @@
 	<script language="javascript" src="../Javascript/DMRHome.js"></script>
 	<script language="Javascript" src="../Javascript/ContentPaneHelp.js"></script>
 	<script language="Javascript" src="../Javascript/ConnectionManager.js"></script>
-	<script language="Javascript" SRC="msntv:/Javascript/VKCodes.js"></script>
+	<script language="Javascript" SRC="/Javascript/VKCodes.js"></script>
 	<script language="javascript">	
 
 //	parameter mediaLocation = "usb" or "pc"
@@ -55,17 +55,17 @@
 		var headerAppName = "";	
 		if ( fromApplication == AP_MUSIC )
 		{
-			viewerDestURL = "msntv:/music/viewer.html";
+			viewerDestURL = "/music/viewer.html";
 			headerAppName = "Music";
 		}
 		if ( fromApplication == AP_VIDEO )
 		{
-			viewerDestURL = "msntv:/video/viewer.html";
+			viewerDestURL = "/video/viewer.html";
 			headerAppName = "Videos";
 		}
 		if ( fromApplication == AP_PHOTO )
 		{
-			viewerDestURL = "msntv:/photo/viewer.html";
+			viewerDestURL = "/photo/viewer.html";
 			headerAppName = "Photos";
 		}
 
@@ -77,7 +77,7 @@
 
 function gotoHomeNetworking()
 {
-	document.location = "msntv:/Settings/Network/HomeNetworking.html";
+	document.location = "/Settings/Network/HomeNetworking.html";
 }
 
 function ClearAppData()
@@ -192,11 +192,11 @@ function getUSBHelpURL()
 {
 	var helpURL = "";
 	if ( fromApplication == AP_MUSIC )
-		helpURL = "msntv:/Help/MSNTV_PROC_SINGLE_Music_MemoryCard_Offline_v11.htm";
+		helpURL = "/Help/MSNTV_PROC_SINGLE_Music_MemoryCard_Offline_v11.htm";
 	if ( fromApplication == AP_PHOTO )
-		helpURL = "msntv:/Help/MSNTV_PROC_SINGLE_Photos_MemoryCard_Offline_v11.htm";
+		helpURL = "/Help/MSNTV_PROC_SINGLE_Photos_MemoryCard_Offline_v11.htm";
 	if ( fromApplication == AP_VIDEO )
-		helpURL = "msntv:/Help/MSNTV_PROC_SINGLE_Videos_MemoryCard_Offline_v11.htm";
+		helpURL = "/Help/MSNTV_PROC_SINGLE_Videos_MemoryCard_Offline_v11.htm";
 	return helpURL;
 }
 
@@ -233,11 +233,11 @@ function getPCHelpURL()
 {
 	var helpURL = "";
 	if ( fromApplication == AP_MUSIC )
-		helpURL = "msntv:/Help/MSNTV_PROC_SINGLE_Music_HomeNet_Offline_v11.htm";
+		helpURL = "/Help/MSNTV_PROC_SINGLE_Music_HomeNet_Offline_v11.htm";
 	if ( fromApplication == AP_PHOTO )
-		helpURL = "msntv:/Help/MSNTV_PROC_SINGLE_Photos_HomeNet_Offline_v11.htm";
+		helpURL = "/Help/MSNTV_PROC_SINGLE_Photos_HomeNet_Offline_v11.htm";
 	if ( fromApplication == AP_VIDEO )
-		helpURL = "msntv:/Help/MSNTV_PROC_SINGLE_Videos_HomeNet_Offline_v11.htm";
+		helpURL = "/Help/MSNTV_PROC_SINGLE_Videos_HomeNet_Offline_v11.htm";
 	return helpURL;
 }
 
@@ -873,7 +873,7 @@ function InitialDraw()
 	document.all.HeadCtl.helpURL = ( mediaLocation == ML_PC ) ? getPCHelpURL() : getUSBHelpURL();
 	document.all.HeadCtl.app = fromApplication;
 	if ( mediaLocation == ML_PC )
-		document.all.HeadCtl.settingsURL = "msntv:/Settings/Network/HomeNetworking.html";
+		document.all.HeadCtl.settingsURL = "/Settings/Network/HomeNetworking.html";
 	
 	// no, draw media nav page
 	document.all.contentFrame.style.display = "inline";

@@ -6,18 +6,18 @@
 	<link rel=StyleSheet type="text/css" href="../css/Photo.css">
 	<link rel=StyleSheet type="text/css" href="../css/Base.css">
 	<script LANGUAGE=Javascript SRC="../Javascript/TVShell.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
-	<script src="msntv:/Javascript/ProgressPanel.js"></script>
-	<script src="msntv:/Javascript/ServiceList.js"></script>
-	<script src="msntv:/Javascript/Parameters.js"></script>
-	<script src="msntv:/Javascript/ContentPaneHelp.js"></script>
-	<script src="msntv:/Javascript/HomeNetworking.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/DMRHome.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/DMRCommon.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/DMREnumerate.js"></script>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
+	<script src="/Javascript/ProgressPanel.js"></script>
+	<script src="/Javascript/ServiceList.js"></script>
+	<script src="/Javascript/Parameters.js"></script>
+	<script src="/Javascript/ContentPaneHelp.js"></script>
+	<script src="/Javascript/HomeNetworking.js"></script>
+	<script language="Javascript" src="/Javascript/DMRHome.js"></script>
+	<script language="Javascript" src="/Javascript/DMRCommon.js"></script>
+	<script language="Javascript" src="/Javascript/DMREnumerate.js"></script>
 	<script src="Photos.js"></script>
 	<script src="PhotosNavigate.js"></script>
-	<script src="msntv:/Javascript/DMRHome.js"></script>
+	<script src="/Javascript/DMRHome.js"></script>
 	<script language="Javascript">
 	  		ShowProgressPanel();
 	  		SetProgressPercent(10);
@@ -218,7 +218,7 @@ TVShell.Message("SelectDevice.html:Checking StorageDevice.VN(0) = " + StorageDev
 
 				if( numUSBDevice == 0 )
 				{
-					str+="<span style=\"display:block; padding-top:5px;\"><UL class=links><LI><a onclick='GotoURL(\"msntv:/Help/MSNTV_PROC_SINGLE_Photos_MemoryCard_Offline_v11.htm\");'>Learn More</a></LI></ul></span>";
+					str+="<span style=\"display:block; padding-top:5px;\"><UL class=links><LI><a onclick='GotoURL(\"/Help/MSNTV_PROC_SINGLE_Photos_MemoryCard_Offline_v11.htm\");'>Learn More</a></LI></ul></span>";
 				}
 			
 				//find UPNP Devices	

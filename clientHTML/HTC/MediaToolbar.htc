@@ -19,7 +19,7 @@
 <!-- To use this HTC, please include the following javascript files:
 <script LANGUAGE=Javascript SRC="../Javascript/TVShell.js"></script>
 <script language=javascript src="../Javascript/HomeNetworking.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/DMREnumerate.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/DMREnumerate.js"></script>
  -->
 
 <PUBLIC:COMPONENT tagname="mediaToolbar" lightweight="true">
@@ -352,12 +352,12 @@ function GotoExplorer( numItems, type )
 			viewer = "Music/Viewer.html";
 		
 		//TBD: get folder name:	TVShell.URL = viewer;
-		TVShell.URL = 'msntv:/MediaNav/MediaNav.html?fromApplication='
+		TVShell.URL = '/MediaNav/MediaNav.html?fromApplication='
 		      + application + '&mediaLocation=' + type;
 	}
 	else
 	{
-		TVShell.URL = 'msntv:/MediaNav/MediaNav.html?fromApplication='
+		TVShell.URL = '/MediaNav/MediaNav.html?fromApplication='
 		      + application + '&mediaLocation=' + type;
 	}
 

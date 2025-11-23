@@ -92,7 +92,7 @@ em
 	left: 4px;
 	margin-left: 4px;
 	behavior: url(#default#alphaImageLoader);
-	src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+	src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	width: 20px;
 	height: 20px;
 }		
@@ -128,7 +128,7 @@ em
 	height:100%;
 	padding-top: 66px;	
 	z-index:-1;
-	background:url(msntv:/Photo/Assets/PhotoNavBar.jpg);
+	background:url(/Photo/Assets/PhotoNavBar.jpg);
 }
 
 .centerSideBarButton
@@ -185,7 +185,7 @@ TD.csbDiv2 { height:1px; background:#F4F1EA;}
 	padding-left: 20px;
 	padding-right: 10px;
 	overflow-y: hidden;
-	behavior: url(msntv:/HTC/ScrollingDIV.htc) url(#default#gradient);
+	behavior: url(/HTC/ScrollingDIV.htc) url(#default#gradient);
 	startColor:#b0b0b0;
 	endcolor: #e8e8e8;
 	angle:0;
@@ -199,7 +199,7 @@ TD.csbDiv2 { height:1px; background:#F4F1EA;}
 	width: 73%;
 	bottom: 0px;
 	overflow-y: hidden;
-	behavior: url(msntv:/HTC/ScrollingDIV.htc);
+	behavior: url(/HTC/ScrollingDIV.htc);
 }
 
 #nonScrollArea

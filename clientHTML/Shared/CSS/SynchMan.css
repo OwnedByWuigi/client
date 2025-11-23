@@ -1,4 +1,4 @@
-@import url(msntv:/CSS/Base.css);
+@import url(/CSS/Base.css);
 
 body
 {
@@ -28,7 +28,7 @@ em
 #header
 {
 	position: absolute;
-	background: url(msntv:/Shared/Images/SynchManagerHeaderBG.jpg) no-repeat;
+	background: url(/Shared/Images/SynchManagerHeaderBG.jpg) no-repeat;
 	background-color: #1C5798;
 	top: 0px;
 	left: 0px;

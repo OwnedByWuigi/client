@@ -15,7 +15,7 @@
 	<script language="javascript" src="../Javascript/DMRHome.js"></script>
 	<script language="Javascript" src="../Javascript/ContentPaneHelp.js"></script>
 	<script language="Javascript" src="../Javascript/ConnectionManager.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 	<script language="Javascript" src="../Javascript/ProgressPanel.js"></script>
 	<script language="Javascript" src="../Javascript/SigninPanel.js"></script>
 	<script language="Javascript" src="../Javascript/DMREnumerate.js"></script>
@@ -498,7 +498,7 @@ function OnNewStream(fromEvent)
 			}
 		}
 		else {
-			artImage.src = "msntv:/Images/1x1.gif";
+			artImage.src = "/Images/1x1.gif";
 		}
 	}
 }
@@ -549,11 +549,11 @@ SynchronizeShares();
 </script>
 </head>
 
-<body onload="OnLoad();"  onunload="OnUnload();" style="behavior:url(msntv:/HTC/Navigation.htc);">
+<body onload="OnLoad();"  onunload="OnUnload();" style="behavior:url(/HTC/Navigation.htc);">
 	<table style="width:100%;height:100%;" cellspacing=0 cellpadding=0>
 		<tr>
 			<td style="height:56px;">
-				<msntv:DMRHeading mainTitle="Music" subTitle="" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "msntv:/Settings/WMPVisualization.html" imageURL="msntv:/Music/Images/MusicHeader.jpg" showscrolltop="false"/>
+				<msntv:DMRHeading mainTitle="Music" subTitle="" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "/Settings/WMPVisualization.html" imageURL="/Music/Images/MusicHeader.jpg" showscrolltop="false"/>
 			</td>
 		</tr>
 		<tr>
@@ -643,7 +643,7 @@ SynchronizeShares();
 								</a>
 							</span>
 						</td>
-						<td style="width:76px; padding:0px 0px 0px 9px;"><img id="artImage" style="width:66px; height:66px;" src="msntv:/Images/1x1.gif"></td>
+						<td style="width:76px; padding:0px 0px 0px 9px;"><img id="artImage" style="width:66px; height:66px;" src="/Images/1x1.gif"></td>
 					</tr>
 				</table>
 				<div id="nowPlayingPromo" style="width:100%; height:100%; text-align:right; padding: 22px 15px 0px 0px; display:none; color:#1D1D1D;">
@@ -654,10 +654,10 @@ SynchronizeShares();
 		<tr>
 			<script>
 				if (GetOnlineState() == ST_OFF) {
-					document.write('<td class="toolbarCell" stretchyBackground="msntv:/Music/Images/MusicNavBarOffline.jpg">');
+					document.write('<td class="toolbarCell" stretchyBackground="/Music/Images/MusicNavBarOffline.jpg">');
 				}
 				else {
-					document.write('<td class="toolbarCell" stretchyBackground="msntv:/Music/Images/MusicNavBar.jpg">');
+					document.write('<td class="toolbarCell" stretchyBackground="/Music/Images/MusicNavBar.jpg">');
 				}
 			</script>
 				<msntv:mediaToolbar toolbarWidth='100%' divWidthPX='580' id="toolbarId" application="music" initialScrollCellIndex=0 itemWidth="50" itemStyle="font-family:Segoe TV; font:18px bold; color:#14224B; padding-left:0px; padding-right:18px;" gutterPX="0" />
@@ -682,7 +682,7 @@ SynchronizeShares();
 							if ( favoritesXML ){
 								var radioNode = favoritesXML.selectSingleNode("//favfolder[@title='Radio']");
 								if ( radioNode ){
-									var favURL = "msntv:/favorites/favorites.html?folder=" + radioNode.getAttribute("id");
+									var favURL = "/favorites/favorites.html?folder=" + radioNode.getAttribute("id");
 									TVShell.PanelManager.Item('favoritespanel').GotoURL(favURL);
 									TVShell.PanelManager.Show('favoritespanel');
 								}

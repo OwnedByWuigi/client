@@ -28,9 +28,9 @@
 		
 </style>
 
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/TVShell.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Javascript/ProgressPanel.js"></script>
-<script LANGUAGE=Javascript SRC="msntv:/Photo/PhotoSOAP.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/TVShell.js"></script>
+<script LANGUAGE=Javascript SRC="/Javascript/ProgressPanel.js"></script>
+<script LANGUAGE=Javascript SRC="/Photo/PhotoSOAP.js"></script>
 
 <script>
 	var albumTitle="";
@@ -158,7 +158,7 @@
 		// go to the online space
 		HideProgressPanel();
 		var msg = "You've successfully set permissions for your online album. ";
-		PanelManager.AnimationMessageBox(msg, "msntv:/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);	
+		PanelManager.AnimationMessageBox(msg, "/Panels/Images/TaskCompleted.gif", "Task_Complete", 2000);	
 		setTimeout(OnShareSpaceComplete, 1000);	
 	}
 	

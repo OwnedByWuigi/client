@@ -1054,7 +1054,7 @@ function HaveYouMovedPopup()
 		// Now ask for their new number.  This should clear the PowerCycled flag
 		// as a side-effect.
 		//
-		TVShell.URL = "msntv:/Settings/GetHomeNumber.html";
+		TVShell.URL = "/Settings/GetHomeNumber.html";
 	}
 	else
 	if (result == 0) {
@@ -1092,7 +1092,7 @@ function MSNIAError(ErrorCode)
 				}
 					
 				if (Connector != null && Connector.CredsPresent) {
-					TVShell.URL = "msntv:/Settings/NewPhoneBook.html";
+					TVShell.URL = "/Settings/NewPhoneBook.html";
 				} else {
 					return false;
 				}
@@ -1102,7 +1102,7 @@ function MSNIAError(ErrorCode)
 		case ConnectError_NewPhoneBook:
 			if (TVShell.ConnectionManager.MSNIAManager.CurrentConnector.Name != SignUpConnectorName &&
 				TVShell.ConnectionManager.MSNIAManager.CurrentConnector.CredsPresent) {
-				TVShell.URL = "msntv:/Settings/NewPhoneBook.html";
+				TVShell.URL = "/Settings/NewPhoneBook.html";
 			}
 			return true;
 			   
@@ -1118,14 +1118,14 @@ function MSNIAError(ErrorCode)
 			// We need to know the user's home phone number before we connect
 			// as MSNIANB, unless they're registering.
 			//
-			TVShell.URL = "msntv:/Settings/GetHomeNumber.html";
+			TVShell.URL = "/Settings/GetHomeNumber.html";
 			return true;
 
 		case ConnectError_BadHomeNumber:
 			//
 			// MSNIA has no number for this area code and exchange
 			//
-			TVShell.URL = "msntv:/Settings/GetHomeNumber.html";
+			TVShell.URL = "/Settings/GetHomeNumber.html";
 			return true;
 
 		case ConnectError_AuthFailure:
@@ -1148,7 +1148,7 @@ function MSNIAError(ErrorCode)
 			return true;
 
 		case ConnectError_DialSettingsStale:
-			TVShell.URL = "msntv:/Settings/AccessNumbers2.html?AutoNavigated=true";
+			TVShell.URL = "/Settings/AccessNumbers2.html?AutoNavigated=true";
 			return true;
 	}
 
@@ -1161,7 +1161,7 @@ function MSNIAError(ErrorCode)
 function BYOANBError(ErrorCode)
 {
 	if (ConnectError_BYOA_10_Digit_Upgrade == ErrorCode) {
-		TVShell.URL="msntv:/Settings/BYOA_10_Digit_Upgrade.html";
+		TVShell.URL="/Settings/BYOA_10_Digit_Upgrade.html";
 		return true;
 	}
 	

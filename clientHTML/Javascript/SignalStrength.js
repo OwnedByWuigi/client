@@ -20,7 +20,7 @@ function WriteSignalStrength(SignalStrengthPercentage)
 
 	var image = "wifi_" + NumberOfBars + ".png";
 
-	return "<span style='vertical-align:middle; height:36px; behavior:url(#default#alphaImageLoader); src:msntv:/Panels/images/" + image + ";'></span>";
+	return "<span style='vertical-align:middle; height:36px; behavior:url(#default#alphaImageLoader); src:/Panels/images/" + image + ";'></span>";
 }
 
 function IsPartnerKVH()

@@ -10,7 +10,7 @@
 	<SCRIPT LANGUAGE="Javascript" SRC="../Javascript/ServiceList.js"></SCRIPT>
 	<SCRIPT LANGUAGE="Javascript" SRC="../Javascript/SettingsTemplate.js"></SCRIPT>
 	<style type="text/css">
-@import url(msntv:/CSS/Base.css);
+@import url(/CSS/Base.css);
 
 body {
 	background-image: none;
@@ -119,7 +119,7 @@ td
 	width: 500px;
 	height: 8px;
 	color: #ff0000;
-	image: url(msntv:/Shared/Images/ProgressBarCustomFill.png);
+	image: url(/Shared/Images/ProgressBarCustomFill.png);
 }
 
 
@@ -237,7 +237,7 @@ td
 			updater.CancelDownload();
 			var mainPanel = TVShell.PanelManager.Item('main');
 			mainPanel.NoBackToMe = true;
-			document.location = "msntv:/Update/UpdateError.html?err=" + result;
+			document.location = "/Update/UpdateError.html?err=" + result;
 		}
 		
 		
@@ -298,7 +298,7 @@ td
 								LoopTestIterationCompleted();
 							}
 							CancelFullUpdate();
-							TVShell.Url = "msntv:/Update/InstallUpdate.html";
+							TVShell.Url = "/Update/InstallUpdate.html";
 						} else {
 							UpdateFailed(updater.DownloadResult);
 						}
@@ -381,7 +381,7 @@ td
 			var UsingWireless = (TVShell.ConnectionManager.WirelessAdapter == TVShell.ConnectionManager.WANAdapter);
 			
 			if ( UsingWireless ) {
-	//			CheckWirelessConnection("msntv:/Update/FullUpdate.html","");
+	//			CheckWirelessConnection("/Update/FullUpdate.html","");
 			//	var netStatus = TVShell.ConnectionManager.WANAdapter.CheckStatus();
 			//	if ( netStatus == ConnectError_NoLine ) {
 			//		return true;
@@ -404,7 +404,7 @@ td
 				if ( can ) {
 					Cancel();
 				}
-				document.location = "msntv:/Update/FullUpdate.html";
+				document.location = "/Update/FullUpdate.html";
 				return false;
 			}			// something happened to the connection
 			ShowStatus("Checking connection...");
@@ -487,7 +487,7 @@ td
 		
 			var mainPanel = TVShell.PanelManager.Item('main');
 			mainPanel.NoBackToMe = true;
-			mainPanel.ClearTravelLog("msntv:/");
+			mainPanel.ClearTravelLog("/");
 
 			TVShell.ScreenSaver.Enable = false;
 			LoopTestCheck();
@@ -519,7 +519,7 @@ td
 //				var netStatus = TVShell.ConnectionManager.WANAdapter.CheckStatus();
 //				if ( netStatus == ConnectError_NoLine ) {
 //					// not associated wait for wireless, then reload page
-//					CheckWirelessConnection("msntv:/Update/FullUpdate.html","");
+//					CheckWirelessConnection("/Update/FullUpdate.html","");
 //				return true;
 //				}
 //			}
@@ -586,7 +586,7 @@ td
 		
 
 	</script>
-	<LINK REL="StyleSheet" TYPE="text/css" HREF="msntv:/Shared/CSS/SynchMan.css">
+	<LINK REL="StyleSheet" TYPE="text/css" HREF="/Shared/CSS/SynchMan.css">
 
 </HEAD>
 

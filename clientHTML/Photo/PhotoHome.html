@@ -1,18 +1,18 @@
 <html xmlns:msntv>
-<?IMPORT namespace="msntv" implementation="msntv:/HTC/PhotoHeading.htc">
-<?import namespace="msntv" implementation="msntv:/HTC/MediaToolbar.htc">
-<?IMPORT namespace="msntv" implementation="msntv:/HTC/SlideShow.htc">
+<?IMPORT namespace="msntv" implementation="/HTC/PhotoHeading.htc">
+<?import namespace="msntv" implementation="/HTC/MediaToolbar.htc">
+<?IMPORT namespace="msntv" implementation="/HTC/SlideShow.htc">
 
 <head>
 	<title>Photo Home</title>
-	<link rel=StyleSheet type="text/css" href="msntv:/css/Base.css">	
-	<link rel=StyleSheet type="text/css" href="msntv:/css/Photo.css">
+	<link rel=StyleSheet type="text/css" href="/css/Base.css">	
+	<link rel=StyleSheet type="text/css" href="/css/Photo.css">
 
 	<style>
 		
 		.stretchyBackground
 		{
-			behavior: url(msntv:/htc/StretchyBackground.htc);
+			behavior: url(/htc/StretchyBackground.htc);
 			margin: 0px;
 			border-width: 0px;
 		}
@@ -44,18 +44,18 @@
 		
 	</style>
 	
-	<script LANGUAGE=Javascript SRC="msntv:/Javascript/TVShell.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/ContentPaneHelp.js"></script>
-	<script src="msntv:/Javascript/Parameters.js"></script>
-	<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
-	<script src="msntv:/Javascript/ProgressPanel.js"></script>
-	<script src="msntv:/Javascript/SigninPanel.js"></script>
-	<script src="msntv:/Javascript/ServiceList.js"></script>
-	<script src="msntv:/Javascript/ConnectionManager.js"></script>
-	<script language="javascript" src="msntv:/Javascript/DMRHome.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/DMRCommon.js"></script>
-	<script language="Javascript" src="msntv:/Javascript/DMREnumerate.js"></script>
-	<script src="msntv:/Javascript/HomeNetworking.js"></script>
+	<script LANGUAGE=Javascript SRC="/Javascript/TVShell.js"></script>
+	<script language="Javascript" src="/Javascript/ContentPaneHelp.js"></script>
+	<script src="/Javascript/Parameters.js"></script>
+	<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
+	<script src="/Javascript/ProgressPanel.js"></script>
+	<script src="/Javascript/SigninPanel.js"></script>
+	<script src="/Javascript/ServiceList.js"></script>
+	<script src="/Javascript/ConnectionManager.js"></script>
+	<script language="javascript" src="/Javascript/DMRHome.js"></script>
+	<script language="Javascript" src="/Javascript/DMRCommon.js"></script>
+	<script language="Javascript" src="/Javascript/DMREnumerate.js"></script>
+	<script src="/Javascript/HomeNetworking.js"></script>
 	<script src="Photos.js"></script>
 
 	<script language="Javascript">
@@ -83,7 +83,7 @@
 			<table cellpadding=0 cellspacing=0 style="width:100%; height:100%;">\
 				<tr>\
 					<td valign=top width=100%>\
-						<span class=photoCell style="filter:null;"><img src="msntv:/Photo/Assets/PhotosHomeBirthdayParty.jpg"> </span>\
+						<span class=photoCell style="filter:null;"><img src="/Photo/Assets/PhotosHomeBirthdayParty.jpg"> </span>\
 						<span class=textCell style="background-color:#D1A76A; color:white;"> Birthday party </span>\
 						<span style="font:17.5px; height:90px; width:254px; color:#FDFCFA; overflow:hidden;"> As you look at photos, this page will begin to fill in. </span>\
 					</td>\
@@ -91,8 +91,8 @@
 				<tr>\
 					<td valign=bottom width=100%>\
 						<span class=textCell style="background-color:#D1A76A; color:white; padding-top:30px;"> Baby </span>\
-						<span class=photoCell style="filter:null;"><img src="msntv:/Photo/Assets/PhotosHomeBaby.jpg"> </span>\
-						<span style="font:17.5px; height:90px; width:254px; color:#1D1D1D; overflow:hidden;">Even if your photos are stored on a PC, you can show them on your TV!<br> <a href="msntv:/Settings/Network/HomeNetworking.html" style="color:#0A0862;font:18px;"> Set up my home network </a></span>\
+						<span class=photoCell style="filter:null;"><img src="/Photo/Assets/PhotosHomeBaby.jpg"> </span>\
+						<span style="font:17.5px; height:90px; width:254px; color:#1D1D1D; overflow:hidden;">Even if your photos are stored on a PC, you can show them on your TV!<br> <a href="/Settings/Network/HomeNetworking.html" style="color:#0A0862;font:18px;"> Set up my home network </a></span>\
 					</td>\
 				</tr>\
 			</table>';	
@@ -282,7 +282,7 @@
 		{
 			if ( TVShell.SystemInfo.AvailVirtualMemory < 3999999){
 				TVShell.Message("Low Virtual Memory ("+TVShell.SystemInfo.AvailVirtualMemory +"). Prompting user to power off and then start the unit");
-				TVShell.PanelManager.Item("main").Document.location.replace("msntv:/Shell/OutOfMemory.html");
+				TVShell.PanelManager.Item("main").Document.location.replace("/Shell/OutOfMemory.html");
 			}
 			// first count the number of cells with content to decide on the layout
 			CountCellWithContent();
@@ -297,7 +297,7 @@
 			{
 				instructionText.style.paddingBottom=10;
 				albumTitleTD.style.height=33;
-				instructionText.innerText="For fast access to photos you’ve recently viewed, choose a photo below.";
+				instructionText.innerText="For fast access to photos youï¿½ve recently viewed, choose a photo below.";
 				photoTableTD.innerHTML = (contentCellCount < kMinViewThreshold) ? minContentStr : maxContentStr;
 				BuildTable();
 				cell[0].focus();
@@ -552,7 +552,7 @@
 					numUsb++;
 					var currentIndex = lastIndex;
 					var StorageDeviceVN = StorageDevice.VolumeName;
-					var destURL="msntv:/photo/Viewer.html?location=0&StorageDeviceVN=" + encodeURIComponent(StorageDeviceVN);
+					var destURL="/photo/Viewer.html?location=0&StorageDeviceVN=" + encodeURIComponent(StorageDeviceVN);
 					SlideShow[currentIndex].flatten = 'true';
 					BuildCell( "Photos on your " + ToFriendlyName(StorageDevice,numUsb), destURL, true, StorageDeviceVN, "");
 				}
@@ -752,7 +752,7 @@
 				AttachmentXMLFileURL = entry.URL;
 				AttachmentCellIndex = lastIndex;
 
-				BuildCell( "Photos in e-mail attachments", "msntv:/Photo/Viewer.html?AttachmentViewer=true", false);
+				BuildCell( "Photos in e-mail attachments", "/Photo/Viewer.html?AttachmentViewer=true", false);
 				GetAttachmentXML();				
 			}
 		}
@@ -796,7 +796,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="height:283px; width:100%; padding:10px 15px 0px 15px; background-image:url(msntv:/Photo/Assets/PhotosHomeBG.jpg);">
+			<td style="height:283px; width:100%; padding:10px 15px 0px 15px; background-image:url(/Photo/Assets/PhotosHomeBG.jpg);">
 				<div style="width:100%; height:100%;">
 					<table cellpadding=0 cellspacing=0 style="width:100%; height:100%;">
 						<tr>
@@ -821,7 +821,7 @@
 			</td>
 		</tr>	
 		<tr>
-			<td style="height:100%; width:100%;" class=stretchyBackground stretchyBackground="msntv:/Photo/Assets/PhotosNavBG.jpg" colspan=2>
+			<td style="height:100%; width:100%;" class=stretchyBackground stretchyBackground="/Photo/Assets/PhotosNavBG.jpg" colspan=2>
 				<msntv:mediaToolbar id="toolbarId" toolbarWidth='100%' divWidthPX='580' application="photo" initialScrollCellIndex=0 itemWidth='70' itemStyle="font-family:Segoe TV; font:18px bold; color:#C2DBF4; padding-left:12px; padding-right:12px;" />
 			</td>
 		</tr>

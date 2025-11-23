@@ -57,15 +57,15 @@ bgMidDiv.style.backgroundColor='red';
 	if (TVShell.DeviceControl.ScreenWidth > 640)
 	    noRepeat = "";	
 
-	bgTopDiv.innerHTML = "<img src='msntv:/Panels/Images/PanelPlayerTopLeftCorner.jpg' style='width:15px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelPlayerTopStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelPlayerTopRightCorner.jpg' style='width:15px;height:15px'>";	
-	bgMidDivHTML = "<img src='msntv:/Panels/Images/PanelPlayerLeftStretch.jpg' style='vertical-align:top;width:15px;height:100%' >" +
-					"<span style='background:#17181C url(msntv:/Panels/Images/PanelPlayerLargeBG.jpg) "+ noRepeat + " bottom center; width:" + (element.clientWidth-30) + "px;height:100%;'></span>" +
-					"<img src='msntv:/Panels/Images/PanelPlayerRightStretch.jpg' style='vertical-align:top;width:15px;height:100%' >";
-	bgBottomDiv.innerHTML = "<img src='msntv:/Panels/Images/PanelPlayerBottomLeftCorner.jpg' style='width:15px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelPlayerBottomStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelPlayerBottomRightCorner.jpg' style='width:15px;height:15px'>";	
+	bgTopDiv.innerHTML = "<img src='/Panels/Images/PanelPlayerTopLeftCorner.jpg' style='width:15px;height:15px'>" +
+						"<img src='/Panels/Images/PanelPlayerTopStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
+						"<img src='/Panels/Images/PanelPlayerTopRightCorner.jpg' style='width:15px;height:15px'>";	
+	bgMidDivHTML = "<img src='/Panels/Images/PanelPlayerLeftStretch.jpg' style='vertical-align:top;width:15px;height:100%' >" +
+					"<span style='background:#17181C url(/Panels/Images/PanelPlayerLargeBG.jpg) "+ noRepeat + " bottom center; width:" + (element.clientWidth-30) + "px;height:100%;'></span>" +
+					"<img src='/Panels/Images/PanelPlayerRightStretch.jpg' style='vertical-align:top;width:15px;height:100%' >";
+	bgBottomDiv.innerHTML = "<img src='/Panels/Images/PanelPlayerBottomLeftCorner.jpg' style='width:15px;height:15px'>" +
+						"<img src='/Panels/Images/PanelPlayerBottomStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
+						"<img src='/Panels/Images/PanelPlayerBottomRightCorner.jpg' style='width:15px;height:15px'>";	
 
 	
 	element.appendChild(bgMidDiv);

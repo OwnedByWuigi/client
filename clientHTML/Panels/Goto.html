@@ -9,7 +9,7 @@
 <link rel=StyleSheet type="text/css" href="../CSS/Default.css">
 <link rel=StyleSheet type="text/css" href="../CSS/Panel.css">
 
-<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_goto_loc.js"></SCRIPT>
+<SCRIPT LANGUAGE=Javascript SRC="/msntv_goto_loc.js"></SCRIPT>
 <script language="Javascript" src="../Javascript/TVShell.js"></script>
 <script language="Javascript" src="../Javascript/PanelImpl.js"></script>
 
@@ -399,7 +399,7 @@ function OnNavigateError(panelName, statusCode, url)
 		mp.UserStrData=lastTyped;
 		appendSuffix = false;
 		suffixIndex = 0;
-		mp.GotoURL("msntv:/TVShell/errors.htm");
+		mp.GotoURL("/TVShell/errors.htm");
 		return;
 	}
 	appendSuffix = false;
@@ -480,13 +480,13 @@ function OnLoad()
 				<table cellspacing=0 cellpadding=0 style="width:100%; height:26; border-top:1px solid #423F3F;">
 					<tr>
 						<td style="width:4px;">
-							<div style="width:4px; height:26px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/DropDownCustomMiddleLeftEdge.png);"></div>
+							<div style="width:4px; height:26px; behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/DropDownCustomMiddleLeftEdge.png);"></div>
 						</td>
-						<td style="font-size:16px; padding-left:2px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/DropDownCustomMiddleCenterStretch.png);">
+						<td style="font-size:16px; padding-left:2px; behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/DropDownCustomMiddleCenterStretch.png);">
 							<script>document.write(L_GOTO_PROMPT)</script>
 						</td>
 						<td style="width:20px;">
-							<div style="width:20px; height:26px; behavior:url(#default#alphaImageLoader); src:url(msntv:/Shared/Images/DropDownCustomMiddleRightEdge.png);"></div>
+							<div style="width:20px; height:26px; behavior:url(#default#alphaImageLoader); src:url(/Shared/Images/DropDownCustomMiddleRightEdge.png);"></div>
 						</td>
 					</tr>
 				</table>

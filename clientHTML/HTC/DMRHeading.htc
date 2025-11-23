@@ -15,7 +15,7 @@
 <PUBLIC:PROPERTY NAME="subTitle" value="SubTitle" />
 <PUBLIC:PROPERTY NAME="helpTopicURL" value="" />
 <PUBLIC:PROPERTY NAME="settingsURL" value="" />
-<PUBLIC:PROPERTY NAME="imageURL" value="msntv:/HTC/images/DMRHeader.jpg" />
+<PUBLIC:PROPERTY NAME="imageURL" value="/HTC/images/DMRHeader.jpg" />
 <PUBLIC:PROPERTY NAME="showscrolltop" value="true"/>
 
 <PUBLIC:ATTACH EVENT="oncontentready" HANDLER="Init" />

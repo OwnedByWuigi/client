@@ -394,7 +394,7 @@ function InitializeScrollFrame(scrollFrame)
 	scrollBody.innerHTML =	"<table id=\"warningTable\" cellspacing=0 cellpadding=0 style=\"width:100%; display:none\">" + 
 								"<tr width=100%>" +
 									"<td valign=center>" + 
-										"<div style=\"position:relative;left:5px;margin:0 0 0 0;behavior:url(#default#alphaImageLoader);src:url(msntv:/Panels/Images/Icon_Info_ErrorPanels.png);width:40px;height:40px;\"></div>" +
+										"<div style=\"position:relative;left:5px;margin:0 0 0 0;behavior:url(#default#alphaImageLoader);src:url(/Panels/Images/Icon_Info_ErrorPanels.png);width:40px;height:40px;\"></div>" +
 									"</td><td width=5></td>" +
 									"<td id=\"warningCell\" class='warningCellText' >" + 
 									"</td>" +

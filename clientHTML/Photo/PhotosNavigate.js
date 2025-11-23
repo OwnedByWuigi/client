@@ -2129,7 +2129,7 @@ function CreateScrollingDiv()
 		warn[j++] = "<table id=warningTable width=100% cellspacing=0 cellpadding=0 style='display:none'>";
 		warn[j++] = "<tr width=100%>";
 		warn[j++] = "<td valign=center>";
-		warn[j++] = "<div style='position:relative;left:5px;margin:0 0 0 0;behavior:url(#default#alphaImageLoader);src:url(msntv:/Panels/Images/Icon_Info_ErrorPanels.png);width:40px;height:40px;'></div>";
+		warn[j++] = "<div style='position:relative;left:5px;margin:0 0 0 0;behavior:url(#default#alphaImageLoader);src:url(/Panels/Images/Icon_Info_ErrorPanels.png);width:40px;height:40px;'></div>";
 		warn[j++] = "</td><td width=5></td>";
 		warn[j++] = "<td id=warningCell style='font-size:18px;padding-top:5px'>";
 		warn[j++] = "</td>";

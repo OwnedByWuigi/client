@@ -12,7 +12,7 @@
 <PUBLIC:COMPONENT tagname="PhotoHeading" lightweight=true>
 
 <PUBLIC:PROPERTY NAME="label" value="Heading" />
-<PUBLIC:PROPERTY NAME="helpURL" value="msntv:/Photo/PhotoHelp.html" />
+<PUBLIC:PROPERTY NAME="helpURL" value="/Photo/PhotoHelp.html" />
 <PUBLIC:PROPERTY NAME="helpDest" value="MSNTV_TRS_TOC_Photos" />
 <PUBLIC:PROPERTY NAME="showscrolltop" />
 
@@ -68,10 +68,10 @@ function GotoSignOn()
 			TVShell.URL = signonEntry.URL;
 		}
 		else if (TVShell.SystemInfo.Flavor == "release" || TVShell.SystemInfo.Flavor == "ppe") {
-			TVShell.URL = "msntv:/Registration/pages/Welcome.html";
+			TVShell.URL = "/Registration/pages/Welcome.html";
 		}
 		else {
-			TVShell.URL = "msntv:/tvshell/Register.html";
+			TVShell.URL = "/tvshell/Register.html";
 		}
 	}				
 }
@@ -86,8 +86,8 @@ function Init()
 		"<DIV id=header>" +
 			"<TABLE cellspacing=0 cellpadding=0 width=100%>" +
 			"<TR>" +
-				"<TD><IMG src='msntv:/Photo/Assets/PhotoHeader.jpg' width=550 height=56 align=top>" +
-				"<TD style='background: url(msntv:/Photo/Assets/PhotoTopStretch.jpg) repeat-x;width:100%'></TD>" +
+				"<TD><IMG src='/Photo/Assets/PhotoHeader.jpg' width=550 height=56 align=top>" +
+				"<TD style='background: url(/Photo/Assets/PhotoTopStretch.jpg) repeat-x;width:100%'></TD>" +
 			"<TR>" +
 				"<TD colspan=2 style='background-color:#F1F1F1;width:100%;height=1px'></TD>" +
 			"</TR>"+

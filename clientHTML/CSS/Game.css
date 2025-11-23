@@ -164,7 +164,7 @@ div.playlistLabel table
 	left: 4px;
 	margin-left: 4px;
 	behavior: url(#default#alphaImageLoader);
-	src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+	src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	width: 20px;
 	height: 20px;
 }
@@ -176,7 +176,7 @@ div.playlistLabel table
 	height:100%;
 	padding-right:23px;
 	border-top:1px solid #89C0EB;
-	behavior:url(msntv:/HTC/ScrollingDIV.htc);
+	behavior:url(/HTC/ScrollingDIV.htc);
 }
 	
 #scrollArea
@@ -189,7 +189,7 @@ div.playlistLabel table
 	padding-left: 20px;
 	padding-right: 10px;
 	overflow-y: auto;
-	behavior: url(msntv:/HTC/ScrollingDIV.htc) url(#default#gradient);
+	behavior: url(/HTC/ScrollingDIV.htc) url(#default#gradient);
 	startColor:#C2E4FC;
 	endcolor: #85D2F5;
 	angle:0;

@@ -53,7 +53,7 @@
 				if (anchors && 0 <= lastIndex && lastIndex < anchors.length && (startIndex == -1 || lastIndex == startIndex)) {
 					var spans = anchors[lastIndex].all.tags("SPAN");
 					spans[0].style.color = "#A93D0D";
-					spans[2].style.src = "url(msntv:/Music/Images/MusicNote.png)";
+					spans[2].style.src = "url(/Music/Images/MusicNote.png)";
 					spans[2].style.behavior = "url(#default#alphaImageLoader)";
 				}
 			}
@@ -156,11 +156,11 @@
 	</script>
 </head>
 
-<body style="behavior: url(msntv:/HTC/ScrollDelegator.htc);">
+<body style="behavior: url(/HTC/ScrollDelegator.htc);">
 	<table style="height:100%; width:100%;" cellpadding="0" cellspacing="0">
 		<tr>
 			<td style="height:57px;">
-				<msntv:DMRHeading id="Heading" mainTitle="Music" subTitle="Song List" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "msntv:/Settings/WMPVisualization.html" imageURL="msntv:/Music/Images/MusicHeader.jpg" />
+				<msntv:DMRHeading id="Heading" mainTitle="Music" subTitle="Song List" helpTopicURL="MSNTV_TRS_TOC_Music" settingsURL = "/Settings/WMPVisualization.html" imageURL="/Music/Images/MusicHeader.jpg" />
 			</td>
 		<tr>
 			<td>
@@ -199,7 +199,7 @@
 									<td class="toggleButton">Shuffle</td>
 								</tr>
 							</table>
-							<msntv:CustomButton id="addsongs" class="sidebarButton" label="Add Songs" onClick="document.location='msntv:/MediaNav/MediaNav.html?fromApplication=music&mediaLocation=pc';" />
+							<msntv:CustomButton id="addsongs" class="sidebarButton" label="Add Songs" onClick="document.location='/MediaNav/MediaNav.html?fromApplication=music&mediaLocation=pc';" />
 							<msntv:CustomButton id="editlist" class="sidebarButton" label="Edit List" onClick="document.location='SongListEdit.html';" />
 							<msntv:CustomButton id="done" class="sidebarButton" label="Done" onclick="history.go(-1);"/>
 						</td>

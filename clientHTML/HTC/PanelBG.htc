@@ -50,26 +50,26 @@ function Init()
 	bgMidDiv.style.zIndex = bgTopDiv.style.zIndex = bgBottomDiv.style.zIndex=-1;
 
 	if (element.clientHeight >= 310) {
-		url = "url(msntv:/Panels/Images/PanelsLargeBG.jpg)";
+		url = "url(/Panels/Images/PanelsLargeBG.jpg)";
 	}	
 	else if (element.clientHeight >= 129) {
-		url = "url(msntv:/Panels/Images/PanelFindBG.jpg)";
+		url = "url(/Panels/Images/PanelFindBG.jpg)";
 	}
 	else {
-		url = "url(msntv:/Panels/Images/PanelProgressBarBG.jpg)";
+		url = "url(/Panels/Images/PanelProgressBarBG.jpg)";
 	}		
 	var noRepeat = "no-repeat";
 	if (TVShell.DeviceControl.ScreenWidth > 640)
 	    noRepeat = "";	
-	bgTopDiv.innerHTML = "<img src='msntv:/Panels/Images/PanelsTopLeftCorner.jpg' style='width:15px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelsTopStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelsTopRightCorner.jpg' style='width:15px;height:15px'>";	
-	bgMidDivHTML = "<img src='msntv:/Panels/Images/PanelsLeftStretch.jpg' style='vertical-align:top;width:15px;height:100%' >" +
+	bgTopDiv.innerHTML = "<img src='/Panels/Images/PanelsTopLeftCorner.jpg' style='width:15px;height:15px'>" +
+						"<img src='/Panels/Images/PanelsTopStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
+						"<img src='/Panels/Images/PanelsTopRightCorner.jpg' style='width:15px;height:15px'>";	
+	bgMidDivHTML = "<img src='/Panels/Images/PanelsLeftStretch.jpg' style='vertical-align:top;width:15px;height:100%' >" +
 					"<span id=\"bgSpan\" style='background:#6CB0F6 " + url + " " + noRepeat + " top center; width:" + (element.clientWidth-30) + "px;height:100%;'></span>" +
-					"<img src='msntv:/Panels/Images/PanelsRightStretch.jpg' style='vertical-align:top;width:15px;height:100%' >";
-	bgBottomDiv.innerHTML = "<img src='msntv:/Panels/Images/PanelsBottomLeftCorner.jpg' style='width:15px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelsBottomStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
-						"<img src='msntv:/Panels/Images/PanelsBottomRightCorner.jpg' style='width:15px;height:15px'>";	
+					"<img src='/Panels/Images/PanelsRightStretch.jpg' style='vertical-align:top;width:15px;height:100%' >";
+	bgBottomDiv.innerHTML = "<img src='/Panels/Images/PanelsBottomLeftCorner.jpg' style='width:15px;height:15px'>" +
+						"<img src='/Panels/Images/PanelsBottomStretch.jpg' style='width:" + (element.clientWidth-30) + "px;height:15px'>" +
+						"<img src='/Panels/Images/PanelsBottomRightCorner.jpg' style='width:15px;height:15px'>";	
 	
 	element.appendChild(bgMidDiv);
 	element.appendChild(bgTopDiv);

@@ -1,5 +1,5 @@
 <html xmlns:msntv>
-<?import namespace="msntv" implementation="msntv:/HTC/CustomButton.htc">
+<?import namespace="msntv" implementation="/HTC/CustomButton.htc">
 <?import namespace="msntv" implementation="../HTC/MediaToolbar.htc">
 <?import namespace="msntv" implementation="../HTC/SlideshowPromo.htc">
 <?import namespace="msntv" implementation="../HTC/MSNSlideShow.htc"> 
@@ -38,7 +38,7 @@
 		left: 0px;
 		width: 238px;
 		height: 306px;
-		background: url(msntv:/Video/Assets/VideoHomeBBSlideB.jpg);
+		background: url(/Video/Assets/VideoHomeBBSlideB.jpg);
 	}
 
 	#BBRightDivId
@@ -48,7 +48,7 @@
 		left: 240px;
 		width: 320px;
 		height: 306px;
-		background: url(msntv:/Video/Assets/VideoHomeBBSlide.jpg);
+		background: url(/Video/Assets/VideoHomeBBSlide.jpg);
 	}
 
 	#NBRightDivId
@@ -90,7 +90,7 @@
 		padding: 0px;
 		font-size: 18px;
 		color: white;
-		background: url(msntv:/Video/Assets/VideoHomeTop.jpg);
+		background: url(/Video/Assets/VideoHomeTop.jpg);
 		filter: blendTrans(duration=0.01); 
 	}
 
@@ -154,7 +154,7 @@
 		margin-left: 4px;
 		margin-right: 8px;
 		behavior: url(#default#alphaImageLoader);
-		src: url(msntv:/Shared/images/Icon_Help_RelatedLink.png);
+		src: url(/Shared/images/Icon_Help_RelatedLink.png);
 	}
 
 	.mainTitle 
@@ -185,7 +185,7 @@
 		top: 33px;
 		width: 238px;
 
-		behavior: url(msntv:/HTC/RecentMedia.htc);
+		behavior: url(/HTC/RecentMedia.htc);
 	}
 	.HNFullHeight 
 	{
@@ -300,13 +300,13 @@
 	{
 		display: block;
 		height: 81px;
-		background: url(msntv:/Video/Assets/VideoHomeNavbarOffline.jpg);
+		background: url(/Video/Assets/VideoHomeNavbarOffline.jpg);
 	}
 	.ToolDivBgOnline
 	{
 		display: block;
 		height: 45px;
-		background: url(msntv:/Video/Assets/VideoHomeNavbarOnline.jpg);
+		background: url(/Video/Assets/VideoHomeNavbarOnline.jpg);
 	}
 </style>
 <script language="Javascript" src="../Javascript/TVShell.js"></script>
@@ -317,9 +317,9 @@
 <script language="Javascript" src="../Javascript/ContentPaneHelp.js"></script>
 <script language="Javascript" src="../Javascript/ConnectionManager.js"></script>
 <script language="Javascript" src="../Javascript/DiplomaSettings.js"></script>
-<SCRIPT LANGUAGE=Javascript SRC="msntv:/msntv_progress_loc.js"></SCRIPT>
+<SCRIPT LANGUAGE=Javascript SRC="/msntv_progress_loc.js"></SCRIPT>
 <script language="Javascript" src="../Javascript/ProgressPanel.js"></script>
-<script language="Javascript" src="msntv:/Javascript/SigninPanel.js"></script>
+<script language="Javascript" src="/Javascript/SigninPanel.js"></script>
 
 <script language="Javascript">
 var V_NONE= 'Hidden';
@@ -357,7 +357,7 @@ if ( GetFullOnlineState() == ST_ON_BB )
 {
 	var old = TVShell.UserManager.CurrentDiplomaSettings;
 	if ( (old & MDIPLOMA_VIDEOHOMETOUR) == 0 )
-		document.location = "msntv:/Video/CustomDiploma.html";
+		document.location = "/Video/CustomDiploma.html";
 }
 
 //////////////////////////////////////////////////////////////////////
