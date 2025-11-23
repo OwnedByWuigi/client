@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'Segoe TV';
+  font-style: normal;
+  font-weight: 400;
+  src: local('/fix/SegoeTV.TTF'), url("/fix/SegoeTV.TTF")
+}
 body.stretchyBackground
 {
 	behavior: url(/htc/StretchyBackground.htc);
@@ -8,7 +13,7 @@ body.stretchyBackground
 
 body, td
 {
-	font-family: "Segoe TV";
+	font-family: 'Segoe TV';
 	font-size: 18px;
 }
 
