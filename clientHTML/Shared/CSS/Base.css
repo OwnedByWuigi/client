@@ -97,3 +97,12 @@ ul.links li a
 	display:inline-block;
 }
 
+#continue {
+filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr='#d6f0fc',
+  endColorstr='#7bbce8',
+  GradientType=0
+);
+border: 2px solid #black;
+color: #2e6fa3;
+}
